@@ -126,8 +126,10 @@ document.addEventListener("DOMContentLoaded",function(){
   .chk { display:inline-flex; align-items:center; gap:6px; font-size:12px; line-height:1.35; border:1px solid var(--border-strong);
          border-radius:99px; padding:5px 11px 5px 8px; cursor:pointer; background:var(--surface); color:var(--text-secondary); }
   .chk input { width:14px; height:14px; accent-color:var(--accent-teal); flex:0 0 auto; }
-  .chk:has(input:checked) { border-color:var(--accent-teal); background:var(--accent-teal-bg); color:var(--accent-teal); font-weight:600; }
-  .chk.danger:has(input:checked) { border-color:var(--accent-red); background:var(--accent-red-bg); color:var(--accent-red); }
+  /* .on la mette il motore quando la casella e' spuntata: con :has(input:checked)
+     Safari prima della 15.4 scartava la regola, e la voce spuntata non si colorava */
+  .chk.on { border-color:var(--accent-teal); background:var(--accent-teal-bg); color:var(--accent-teal); font-weight:600; }
+  .chk.danger.on { border-color:var(--accent-red); background:var(--accent-red-bg); color:var(--accent-red); }
   .chks.wide { flex-direction:column; }
   .chks.wide .chk { border-radius:8px; width:100%; justify-content:flex-start; }
   .sublbl { font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text-muted); margin:12px 0 2px; }
@@ -2160,7 +2162,11 @@ html.js.motore-ko #nomotore{display:block}
     e.addEventListener("input",render); e.addEventListener("change",render);
   }
   var boxes=document.querySelectorAll("input[type=checkbox]");
-  for(var j=0;j<boxes.length;j++) boxes[j].addEventListener("change",render);
+  function spunta(b){ var l=b.parentNode; if(l && l.classList && l.classList.contains("chk")) l.classList.toggle("on", b.checked); }
+  for(var j=0;j<boxes.length;j++){
+    spunta(boxes[j]);
+    boxes[j].addEventListener("change",function(){ spunta(this); render(); });
+  }
   var cns=document.querySelectorAll(".cn");
   for(var k=0;k<cns.length;k++) cns[k].addEventListener("click",function(){
     manual=this.getAttribute("data-k"); render();
