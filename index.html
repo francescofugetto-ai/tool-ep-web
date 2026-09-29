@@ -340,7 +340,7 @@ html.js.motore-ko #nomotore{display:block}
       <div class="box box-accent" style="margin-bottom:0"><span class="prov prov-fonte">Suppl. Tab. 1</span>
         Gli altri due item — <strong>FC &gt;100/min</strong> (1,5 / 1) e <strong>neoplasia attiva</strong> (1 / 1) — li prendo dal blocco 1, non ripeterli qui.
         <br><strong>Originale</strong>: bassa 0–1 · intermedia 2–6 · alta ≥7; a due livelli, EP improbabile 0–4 · probabile ≥5. <strong>Semplificata</strong>: EP improbabile 0–1 · probabile ≥2.
-        <br>Con probabilità <strong>alta</strong> il D-dimero <strong>non va dosato</strong> <span class="cor cor-3nb">III</span>: un risultato normale non esclude l'EP.
+        <br>Con probabilità <strong>alta</strong> il D-dimero <strong>non va dosato</strong> <span class="cor cor-3h">III</span> <span class="loe">A</span> <span class="prov prov-fonte">ESC 2019</span>: un risultato normale non esclude l'EP.
       </div>
     </div>
   </details>
@@ -436,10 +436,17 @@ html.js.motore-ko #nomotore{display:block}
 
       <div class="sublbl">Ipoperfusione / danno d'organo <span style="font-weight:400;text-transform:none;letter-spacing:0">— definisce D2 anche a pressione normale</span></div>
       <div class="chks">
-        <label class="chk danger"><input type="checkbox" id="ipDiur"> Diuresi &lt;720 mL/24h</label>
-        <label class="chk danger"><input type="checkbox" id="ipCreat"> Creatinina ↑ ≥0,3 mg/dL in 24h</label>
+        <label class="chk danger"><input type="checkbox" id="ipDiur"> Diuresi &lt;720 mL/24 h o &lt;0,5 mL/kg/h</label>
+        <label class="chk danger"><input type="checkbox" id="ipCreat"> Danno renale acuto (creatinina ↑ ≥0,3 mg/dL in 24 h)</label>
         <label class="chk danger"><input type="checkbox" id="ipCi"> Indice cardiaco ≤2,2 L/min/m²</label>
+        <label class="chk danger"><input type="checkbox" id="ipScai"> Stadio SCAI o punteggio CPES in aumento</label>
       </div>
+      <div class="box box-accent" style="margin:.8rem 0 0;font-size:12px"><span class="prov prov-fonte">Fonte</span>
+        La linea guida definisce lo shock normoteso due volte: nella nota della raccomandazione sull'emodinamica
+        (lattato &gt;2 mmol/L, diuresi &lt;720 mL/24 h, creatinina ↑ ≥0,3 in 24 h, indice cardiaco ≤2,2) e nella Fig. 2
+        (lattato &gt;2, danno renale acuto, diuresi &lt;0,5 mL/kg/h, stato mentale alterato, indice cardiaco &lt;2,2,
+        MAP &lt;60 mmHg, shock score in aumento). Il tool mette la D2 con un marcatore qualsiasi delle due liste:
+        lo stato mentale si segna nel blocco 1, la MAP si calcola da PAS e PAD.</div>
     </div>
   </details>
 
@@ -469,7 +476,7 @@ html.js.motore-ko #nomotore{display:block}
         <label class="chk"><input type="checkbox" id="f3"> Accesso facile alle cure</label>
       </div>
       <div class="box box-accent" style="margin-bottom:0"><span class="prov prov-fonte">Fonte</span>
-        Hestia negativo <strong>non basta</strong>: la gestione ambulatoriale richiede anche <strong>accesso immediato all'anticoagulante</strong> e <strong>follow-up rapido e affidabile</strong> <span class="cor cor-2a">IIa</span> <span class="loe">B-R</span>&#8288;. Il giudizio clinico condiviso può legittimamente derogare lo score (HOME-PE).
+        Hestia negativo <strong>non basta</strong>: la gestione ambulatoriale richiede anche <strong>accesso immediato all'anticoagulante</strong> e <strong>follow-up rapido e affidabile</strong> <span class="cor cor-2a">2a</span> <span class="loe">B-R</span> <span class="prov prov-fonte">AHA/ACC 2026</span>&#8288;. Il giudizio clinico condiviso può legittimamente derogare lo score (HOME-PE).
       </div>
     </div>
   </details>
@@ -580,11 +587,11 @@ html.js.motore-ko #nomotore{display:block}
     <tr><td class="pr-mol">UFH<span>bolo iniziale</span></td><td class="pr-dose"><b>80 UI/kg</b> EV</td><td class="pr-dose"><span class="dose-live" data-perkg="80" data-unit="UI"></span></td><td class="pr-rene">Nessuno: è l’eparina indicata proprio con <b>ClCr ≤30</b> <span class="prov prov-fonte">fonte</span></td><td>Sospetta EP ad alto rischio: si somministra <strong>subito</strong>, prima ancora della conferma TC (Suppl. Fig. 1)</td></tr>
     <tr><td class="pr-mol">Enoxaparina<span>due somministrazioni</span></td><td class="pr-dose"><b>1,0 mg/kg</b> sc ogni 12 h</td><td class="pr-dose"><span class="dose-live" data-perkg="1" data-unit="mg"></span> ogni 12 h</td><td class="pr-rene">ClCr 15–29: <b>1 mg/kg 1×/die</b> · &lt;15 o dialisi: non raccomandata, passa a UFH <span class="prov prov-rcp">scheda tecnica</span></td><td>Schema standard</td></tr>
     <tr><td class="pr-mol">Enoxaparina<span>monosomministrazione</span></td><td class="pr-dose"><b>1,5 mg/kg</b> sc 1×/die</td><td class="pr-dose"><span class="dose-live" data-perkg="1.5" data-unit="mg"></span> 1×/die</td><td class="pr-rene">ClCr 15–29: si scende a <b>1 mg/kg 1×/die</b>, non 1,5 <span class="prov prov-rcp">scheda tecnica</span></td><td>Approvata per il trattamento <strong>ospedaliero</strong> dell'EP negli USA e in <em>alcuni</em> ma non tutti i paesi europei: verifica la scheda tecnica italiana</td></tr>
-    <tr><td class="pr-mol">Fondaparinux</td><td class="pr-dose"><b>5 mg</b> se &lt;50 kg · <b>7,5 mg</b> se 50–100 kg · <b>10 mg</b> se &gt;100 kg, sc 1×/die</td><td class="pr-dose"><span class="dose-live" data-fonda="1"></span></td><td class="pr-rene">ClCr &lt;30: <b>controindicato</b> a dose terapeutica <span class="prov prov-rcp">scheda tecnica</span> · 30–50: entità della riduzione <span class="verif">DA VERIFICARE</span></td><td>Nessun monitoraggio anti-Xa di routine. Da considerare in caso di allergia o reazione avversa all'EBPM</td></tr>
-    <tr><td class="pr-mol">Tinzaparina</td><td class="pr-dose"><b>175 U/kg</b> sc 1×/die</td><td class="pr-dose">—</td><td class="pr-rene">Nessuna riduzione fino a <b>ClCr ≥20</b> <span class="prov prov-rcp">scheda tecnica</span> · sotto: anti-Xa</td><td>Schema riportato senza calcolo automatico</td></tr>
-    <tr><td class="pr-mol">Dalteparina</td><td class="pr-dose"><b>100 UI/kg</b> ogni 12 h oppure <b>200 UI/kg</b> 1×/die, sc</td><td class="pr-dose">—</td><td class="pr-rene">ClCr &lt;30: nessuno schema ridotto standardizzato — <b>guida con l’anti-Xa</b> <span class="prov prov-rcp">scheda tecnica</span></td><td>Nel paziente <strong>oncologico</strong>: 200 UI/kg (massimo 18 000 UI) 1×/die per 1 mese, poi <strong>150 UI/kg</strong> 1×/die per 5 mesi</td></tr>
-    <tr><td class="pr-mol">Nadroparina</td><td class="pr-dose"><b>86 UI/kg</b> ogni 12 h oppure <b>171 UI/kg</b> 1×/die, sc</td><td class="pr-dose">—</td><td class="pr-rene">ClCr &lt;30: <b>non usare</b> a dose curativa · 30–50: riduzione, entità <span class="verif">DA VERIFICARE</span></td><td>Approvata per l'EP in alcuni ma non tutti i paesi europei</td></tr>
-    <tr><td class="pr-mol">rt-PA<span>regime accelerato</span></td><td class="pr-dose"><b>0,6 mg/kg</b> in 15 min, massimo 50 mg</td><td class="pr-dose"><span class="dose-live" data-mg="0.6" data-cap="50"></span></td><td class="pr-rene">Nessuno. In uremia cambia il <b>rischio emorragico</b>, non la dose <span class="prov prov-fonte">fonte</span></td><td>Non ufficialmente approvato; usato nell'instabilità emodinamica estrema come l'arresto cardiaco</td></tr>
+    <tr><td class="pr-mol">Fondaparinux</td><td class="pr-dose"><b>5 mg</b> se &lt;50 kg · <b>7,5 mg</b> se 50–100 kg · <b>10 mg</b> se &gt;100 kg, sc 1×/die</td><td class="pr-dose"><span class="dose-live" data-fonda="1"></span></td><td class="pr-rene">ClCr &lt;30: <b>controindicato</b> · 30–50: <b>nessuna riduzione</b>, cautela, durata non oltre gli studi (media 7 giorni); oltre 100 kg, dopo 10 mg iniziali si può considerare 7,5 mg <span class="prov prov-rcp">scheda tecnica</span></td><td>Nessun monitoraggio anti-Xa di routine. Da considerare in caso di allergia o reazione avversa all'EBPM</td></tr>
+    <tr><td class="pr-mol">Tinzaparina</td><td class="pr-dose"><b>175 U/kg</b> sc 1×/die</td><td class="pr-dose">—</td><td class="pr-rene">ClCr &lt;30: <b>non raccomandata</b>, dose non stabilita; se serve, con monitoraggio dell’anti-Xa (nessun accumulo fino a 20) <span class="prov prov-rcp">scheda tecnica</span></td><td>Schema riportato senza calcolo automatico</td></tr>
+    <tr><td class="pr-mol">Dalteparina</td><td class="pr-dose"><b>100 UI/kg</b> ogni 12 h oppure <b>200 UI/kg</b> 1×/die, sc</td><td class="pr-dose">—</td><td class="pr-rene">ClCr &lt;30: nessuna riduzione fissa — <b>dose guidata dall’anti-Xa</b> (scheda tecnica britannica: in Italia non risulta autorizzata) <span class="prov prov-rcp">scheda tecnica</span></td><td>Nel paziente <strong>oncologico</strong>: 200 UI/kg (massimo 18 000 UI) 1×/die per 1 mese, poi <strong>150 UI/kg</strong> 1×/die per 5 mesi</td></tr>
+    <tr><td class="pr-mol">Nadroparina</td><td class="pr-dose"><b>86 UI/kg</b> ogni 12 h oppure <b>171 UI/kg</b> 1×/die, sc</td><td class="pr-dose">—</td><td class="pr-rene">ClCr &lt;30: <b>controindicata</b> a dose di trattamento · 30–50: riduzione dal <b>25 al 33%</b>, se la giudichi appropriata <span class="prov prov-rcp">scheda tecnica</span></td><td>Approvata per l'EP in alcuni ma non tutti i paesi europei</td></tr>
+    <tr><td class="pr-mol">rt-PA<span>regime accelerato</span></td><td class="pr-dose"><b>0,6 mg/kg</b> in 15 min, massimo 50 mg</td><td class="pr-dose"><span class="dose-live" data-mg="0.6" data-cap="50"></span></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Non ufficialmente approvato; usato nell'instabilità emodinamica estrema come l'arresto cardiaco</td></tr>
   </tbody></table></div>
   <div class="renelive" data-rene="t1"></div>
 
@@ -609,16 +616,16 @@ html.js.motore-ko #nomotore{display:block}
   <table class="pront" id="tabAvanzate">
   <thead><tr><th style="width:14%">Categoria</th><th>Trombolisi sistemica</th><th>CDL</th><th>Trombectomia meccanica</th><th>Embolectomia chirurgica</th></tr></thead>
   <tbody>
-    <tr data-r="A"><td class="pr-mol">A–C1</td><td><span class="cor cor-3h">III</span> Harm <span class="loe">A</span></td><td><span class="cor cor-3nb">III</span> NB <span class="loe">C-EO</span></td><td><span class="cor cor-3nb">III</span> NB <span class="loe">C-EO</span></td><td><span class="cor cor-3nb">III</span> NB <span class="loe">C-EO</span></td></tr>
-    <tr data-r="C2"><td class="pr-mol">C2</td><td><span class="cor cor-3h">III</span> Harm <span class="loe">B-R</span></td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-3nb">III</span> NB <span class="loe">C-EO</span></td></tr>
-    <tr data-r="C3"><td class="pr-mol">C3</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-3nb">III</span> NB <span class="loe">C-EO</span></td></tr>
-    <tr data-r="D"><td class="pr-mol">D1–D2</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> considerabile</td><td><span class="cor cor-2b">IIb</span> <span class="loe">B-NR</span> considerabile</td><td><span class="cor cor-2b">IIb</span> <span class="loe">B-NR</span> considerabile</td><td><span class="cor cor-2b">IIb</span> <span class="loe">C-LD</span> incerto</td></tr>
-    <tr data-r="E1"><td class="pr-mol">E1</td><td><span class="cor cor-2a">IIa</span> <span class="loe">C-LD</span></td><td><span class="cor cor-2a">IIa</span> <span class="loe">C-LD</span></td><td><span class="cor cor-2a">IIa</span> <span class="loe">B-NR</span></td><td><span class="cor cor-2a">IIa</span> <span class="loe">B-NR</span></td></tr>
-    <tr data-r="E2"><td class="pr-mol">E2</td><td><span class="cor cor-2a">IIa</span> <span class="loe">C-LD</span></td><td>N/A</td><td>N/A</td><td><span class="cor cor-3nb">III</span> NB <span class="loe">B-NR</span> (salvo già su MCS)</td></tr>
+    <tr data-r="A"><td class="pr-mol">A–C1</td><td><span class="cor cor-3h">3: Harm</span> <span class="loe">A</span></td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">C-EO</span></td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">C-EO</span></td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">C-EO</span></td></tr>
+    <tr data-r="C2"><td class="pr-mol">C2</td><td><span class="cor cor-3h">3: Harm</span> <span class="loe">B-R</span></td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">C-EO</span></td></tr>
+    <tr data-r="C3"><td class="pr-mol">C3</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">C-EO</span></td></tr>
+    <tr data-r="D"><td class="pr-mol">D1–D2</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> considerabile</td><td><span class="cor cor-2b">2b</span> <span class="loe">B-NR</span> considerabile</td><td><span class="cor cor-2b">2b</span> <span class="loe">B-NR</span> considerabile</td><td><span class="cor cor-2b">2b</span> <span class="loe">C-LD</span> incerto</td></tr>
+    <tr data-r="E1"><td class="pr-mol">E1</td><td><span class="cor cor-2a">2a</span> <span class="loe">C-LD</span></td><td><span class="cor cor-2a">2a</span> <span class="loe">C-LD</span></td><td><span class="cor cor-2a">2a</span> <span class="loe">B-NR</span></td><td><span class="cor cor-2a">2a</span> <span class="loe">B-NR</span></td></tr>
+    <tr data-r="E2"><td class="pr-mol">E2</td><td><span class="cor cor-2a">2a</span> <span class="loe">C-LD</span></td><td>N/A</td><td>N/A</td><td><span class="cor cor-3nb">3: No Benefit</span> <span class="loe">B-NR</span> (salvo già su MCS)</td></tr>
   </tbody></table></div>
   <div class="box box-accent"><span class="prov prov-sintesi">Lettura rapida</span>
     Nessuna terapia avanzata in <strong>A–C1</strong>. Da <strong>C2</strong> in su prevale l'incertezza (IIb) fino a <strong>D1-2</strong>. Solo in <strong>E1</strong> tutte e quattro le opzioni arrivano a IIa. In <strong>E2</strong> resta ragionevole la sola trombolisi sistemica.
-    <br><span class="prov prov-fonte">Fonte</span> In <strong>C3–E2</strong> con <strong>clot-in-transit</strong>, le terapie avanzate rispetto alla sola anticoagulazione sono ragionevoli <span class="cor cor-2a">IIa</span> <span class="loe">C-LD</span>&#8288;.
+    <br><span class="prov prov-fonte">Fonte</span> In <strong>C3–E2</strong> con <strong>clot-in-transit</strong>, le terapie avanzate rispetto alla sola anticoagulazione sono ragionevoli <span class="cor cor-2a">2a</span> <span class="loe">C-LD</span>&#8288;.
   </div>
 
   <div class="subsection-label">Prontuario dosi — solo ciò che serve al letto</div>
@@ -626,20 +633,20 @@ html.js.motore-ko #nomotore{display:block}
   <table class="pront">
   <thead><tr><th style="width:19%">Molecola</th><th style="width:29%">Dose</th><th style="width:23%">Rene</th><th>Nota operativa</th></tr></thead>
   <tbody>
-    <tr><td class="pr-mol">Apixaban<span>induzione</span></td><td class="pr-dose"><b>10 mg</b> PO ×2/die per 7 giorni, poi <b>5 mg</b> PO ×2/die</td><td class="pr-rene">ClCr 15–29: <b>cautela</b> · &lt;15: non raccomandato <span class="prov prov-fonte">Suppl. Tab. 8</span> · stadio 4-5 o dialisi: beneficio incerto <span class="cor cor-2b">IIb</span></td><td>Nessun bridging parenterale necessario</td></tr>
-    <tr><td class="pr-mol">Rivaroxaban<span>induzione</span></td><td class="pr-dose"><b>15 mg</b> PO ×2/die per 21 giorni, poi <b>20 mg</b> PO ×1/die</td><td class="pr-rene">ClCr 15–29: <b>cautela</b> · &lt;15: non raccomandato <span class="prov prov-fonte">Suppl. Tab. 8</span></td><td>Nessun bridging parenterale necessario</td></tr>
-    <tr><td class="pr-mol">Dabigatran / Edoxaban</td><td class="pr-dose">≥5 giorni di parenterale (EBPM/UFH) prima dell'avvio · <b>dabigatran 150 mg ×2/die</b> · <b>edoxaban 60 mg ×1/die</b>, 30 mg se ClCr 30–50 o peso &lt;60 kg<br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 8</span></td><td class="pr-rene">Dabigatran <b>non raccomandato &lt;30</b> (e già &lt;50 con inibitori P-gp) · edoxaban <b>30 mg</b> se ClCr 15–50, no &lt;15 <span class="prov prov-fonte">Suppl. Tab. 8</span></td><td>Bridging parenterale obbligatorio. AHA/ACC non riporta i mg: dosi dai trial di fase III citati dal supplementare ESC</td></tr>
+    <tr><td class="pr-mol">Apixaban<span>induzione</span></td><td class="pr-dose"><b>10 mg</b> PO ×2/die per 7 giorni, poi <b>5 mg</b> PO ×2/die</td><td class="pr-rene">&lt;15: non raccomandato <span class="prov prov-fonte">Suppl. Tab. 6</span> · 15–29: AMPLIFY escludeva &lt;25 <span class="prov prov-fonte">Suppl. Tab. 8</span> · stadio 4-5 o dialisi: vantaggio sul VKA incerto <span class="cor cor-2b">2b</span></td><td>Nessun bridging parenterale necessario</td></tr>
+    <tr><td class="pr-mol">Rivaroxaban<span>induzione</span></td><td class="pr-dose"><b>15 mg</b> PO ×2/die per 21 giorni, poi <b>20 mg</b> PO ×1/die</td><td class="pr-rene">&lt;15 non raccomandato per EMA, &lt;30 per FDA <span class="prov prov-fonte">Suppl. Tab. 6</span></td><td>Nessun bridging parenterale necessario</td></tr>
+    <tr><td class="pr-mol">Dabigatran / Edoxaban</td><td class="pr-dose">≥5 giorni di parenterale (EBPM/UFH) prima dell'avvio · <b>dabigatran 150 mg ×2/die</b> · <b>edoxaban 60 mg ×1/die</b>, 30 mg se ClCr 30–50 o peso &lt;60 kg<br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 8</span></td><td class="pr-rene">Dabigatran <b>non raccomandato &lt;30</b> (e già &lt;50 con inibitori P-gp) <span class="prov prov-fonte">Suppl. Tab. 6</span> · edoxaban <b>30 mg</b> se ClCr 30–50 <span class="prov prov-fonte">Suppl. Tab. 8</span>, non raccomandato &lt;15 <span class="prov prov-fonte">Suppl. Tab. 6</span>; fra 15 e 29 la dose è <span class="verif">DA VERIFICARE</span></td><td>Bridging parenterale obbligatorio. AHA/ACC non riporta i mg: dosi dai trial di fase III citati dal supplementare ESC</td></tr>
     <tr><td class="pr-mol">VKA (warfarin)</td><td class="pr-dose">Parenterale + VKA in overlap fino a <b>INR ≥2</b>, poi stop parenterale</td><td class="pr-rene">Nessun aggiustamento di dose: si titola sull’<b>INR</b>. In IRC controlli più ravvicinati <span class="prov prov-integr">integrazione</span></td><td>Seconda scelta salvo APS trombotica, gravidanza/allattamento, Child-Pugh C</td></tr>
-    <tr><td class="pr-mol">EBPM<span>parenterale iniziale</span></td><td class="pr-dose"><b>Enoxaparina 1,0 mg/kg</b> ogni 12 h o <b>1,5 mg/kg</b> 1×/die → <span class="dose-live" data-perkg="1" data-unit="mg"></span> / <span class="dose-live" data-perkg="1.5" data-unit="mg"></span> · <b>Fondaparinux</b> <span class="dose-live" data-fonda="1"></span><br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 5</span></td><td class="pr-rene">ClCr 15–29: enoxaparina <b>1 mg/kg 1×/die</b> <span class="prov prov-rcp">scheda tecnica</span> · ClCr ≤30: la linea guida indica <b>UFH</b> <span class="prov prov-fonte">fonte</span></td><td>AHA/ACC non pubblica una tabella per singola EBPM: le dosi vengono dal supplementare ESC. Preferita all'UFH in C1–E1 <span class="cor cor-1">I</span> <span class="loe">B-R</span></td></tr>
-    <tr><td class="pr-mol">EBPM<span>obesità classe III</span></td><td class="pr-dose"><b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die (peso reale)</td><td class="pr-rene">Il farmaco resta sul <b>peso reale</b>; è la ClCr che va stimata sul peso aggiustato <span class="prov prov-integr">integrazione</span></td><td>Da 1 piccolo RCT: dose sperimentale, <strong>non</strong> schema formalmente raccomandato <span class="cor cor-2b">IIb</span></td></tr>
-    <tr><td class="pr-mol">Anti-Xa</td><td class="pr-dose">Picco a <b>3–5 ore</b> dalla dose, a steady state (≥3 dosi)</td><td class="pr-rene"><b>È qui che serve</b>: con ClCr &lt;30 in EBPM il monitoraggio è ragionevole <span class="cor cor-2a">IIa</span> <span class="prov prov-fonte">fonte</span></td><td>Non di routine <span class="cor cor-3nb">III</span> NB <span class="loe">A</span>&#8288;; riservato a ClCr&lt;30 <span class="cor cor-2a">IIa</span></td></tr>
-    <tr><td class="pr-mol">Noradrenalina</td><td class="pr-dose">≤<b>15 µg/min</b> = effetto minimo sulle resistenze polmonari — con 8 mg in 50 mL: <span class="dose-live" data-drug="noradrenalina" data-dose="0.05-0.5"></span> per 0,05–0,5 µg/kg/min</td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Oltre 15 µg/min <strong>aggiungi un secondo vasopressore</strong> invece di salire</td></tr>
-    <tr><td class="pr-mol">Dobutamina</td><td class="pr-dose">fino a <b>10 µg/kg/min</b> — con 250 mg in 50 mL: <span class="dose-live" data-drug="dobutamina" data-dose="2-10"></span></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Adjunct alla NA in E1–E2; possibile agente iniziale in D2</td></tr>
-    <tr><td class="pr-mol">Cristalloidi</td><td class="pr-dose">boli ≤<b>500 mL</b></td><td class="pr-rene">Nessuno sulla dose. Con oliguria o anuria <b>non ripetere il bolo al buio</b> <span class="prov prov-integr">integrazione</span></td><td>Solo D1–D2 con sospetto preload ridotto <span class="cor cor-2b">IIb</span>&#8288;. Mai carico indiscriminato</td></tr>
-    <tr><td class="pr-mol">rt-PA<span>sistemica standard</span></td><td class="pr-dose"><b>100 mg EV in 2 ore</b></td><td class="pr-rene">Nessuno. In uremia cambia il <b>rischio emorragico</b>, non la dose <span class="prov prov-fonte">fonte</span></td><td>PEITHO: sanguinamento extracranico 6,3% vs 1,2%; ictus 2,4% vs 0,2%</td></tr>
-    <tr><td class="pr-mol">rt-PA<span>dose ridotta</span></td><td class="pr-dose"><b>25–50 mg</b></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Dose ridotta considerabile per ridurre il sanguinamento <span class="cor cor-2b">IIb</span>&#8288;; PEITHO-3 in corso</td></tr>
-    <tr><td class="pr-mol">Alteplase<span>CDL</span></td><td class="pr-dose"><b>5–10 mg per arteria polmonare</b> (totale studiato 4–24 mg su 2–24 h)</td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>&lt;5 mg/PA <span class="cor cor-3nb">III</span> NB. Anticoagulazione concomitante <span class="cor cor-1">I</span> <span class="loe">C-LD</span></td></tr>
-    <tr><td class="pr-mol">NO inalatorio</td><td class="pr-dose">Dose <span class="verif">DA VERIFICARE</span></td><td class="pr-rene">Non applicabile: la dose stessa è <span class="verif">DA VERIFICARE</span></td><td>C2–E, per ridurre il postcarico del VD <span class="cor cor-2b">IIb</span>&#8288;; endpoint primario dell'RCT negativo</td></tr>
+    <tr><td class="pr-mol">EBPM<span>parenterale iniziale</span></td><td class="pr-dose"><b>Enoxaparina 1,0 mg/kg</b> ogni 12 h o <b>1,5 mg/kg</b> 1×/die → <span class="dose-live" data-perkg="1" data-unit="mg"></span> / <span class="dose-live" data-perkg="1.5" data-unit="mg"></span> · <b>Fondaparinux</b> <span class="dose-live" data-fonda="1"></span><br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 5</span></td><td class="pr-rene">ClCr 15–29: enoxaparina <b>1 mg/kg 1×/die</b> <span class="prov prov-rcp">scheda tecnica</span> · ClCr ≤30: la linea guida indica <b>UFH</b> <span class="prov prov-fonte">fonte</span></td><td>AHA/ACC non pubblica una tabella per singola EBPM: le dosi vengono dal supplementare ESC. Preferita all'UFH in C1–E1 <span class="cor cor-1">1</span> <span class="loe">B-R</span></td></tr>
+    <tr><td class="pr-mol">EBPM<span>obesità classe III</span></td><td class="pr-dose"><b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die (peso reale)</td><td class="pr-rene">Il farmaco resta sul <b>peso reale</b>; è la ClCr che va stimata sul peso aggiustato <span class="prov prov-integr">integrazione</span></td><td>Da 1 piccolo RCT: dose sperimentale, <strong>non</strong> schema formalmente raccomandato <span class="cor cor-2b">2b</span></td></tr>
+    <tr><td class="pr-mol">Anti-Xa</td><td class="pr-dose">Picco a <b>3–5 ore</b> dalla dose, a steady state (≥3 dosi)</td><td class="pr-rene"><b>È qui che serve</b>: con ClCr &lt;30 in EBPM il monitoraggio è ragionevole <span class="cor cor-2a">2a</span> <span class="prov prov-fonte">fonte</span></td><td>Non di routine <span class="cor cor-3nb">3: No Benefit</span> <span class="loe">A</span>&#8288;; riservato a ClCr&lt;30 <span class="cor cor-2a">2a</span></td></tr>
+    <tr><td class="pr-mol">Noradrenalina</td><td class="pr-dose">≤<b>15 µg/min</b> = effetto minimo sulle resistenze polmonari — con 8 mg in 50 mL: <span class="dose-live" data-drug="noradrenalina" data-dose="0.05-0.5"></span> per 0,05–0,5 µg/kg/min</td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Oltre 15 µg/min <strong>aggiungi un secondo vasopressore</strong> invece di salire</td></tr>
+    <tr><td class="pr-mol">Dobutamina</td><td class="pr-dose">fino a <b>10 µg/kg/min</b> — con 250 mg in 50 mL: <span class="dose-live" data-drug="dobutamina" data-dose="2-10"></span></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Adjunct alla NA in E1–E2; possibile agente iniziale in D2</td></tr>
+    <tr><td class="pr-mol">Cristalloidi</td><td class="pr-dose">boli ≤<b>500 mL</b></td><td class="pr-rene">Nessuno sulla dose. Con oliguria o anuria <b>non ripetere il bolo al buio</b> <span class="prov prov-integr">integrazione</span></td><td>Solo D1–D2 con sospetto preload ridotto <span class="cor cor-2b">2b</span>&#8288;. Mai carico indiscriminato</td></tr>
+    <tr><td class="pr-mol">rt-PA<span>sistemica standard</span></td><td class="pr-dose"><b>100 mg EV in 2 ore</b></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>PEITHO: sanguinamento extracranico 6,3% vs 1,2%; ictus 2,4% vs 0,2%</td></tr>
+    <tr><td class="pr-mol">rt-PA<span>dose ridotta</span></td><td class="pr-dose"><b>25–50 mg</b></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Dose ridotta considerabile per ridurre il sanguinamento <span class="cor cor-2b">2b</span>&#8288;; PEITHO-3 in corso</td></tr>
+    <tr><td class="pr-mol">Alteplase<span>CDL</span></td><td class="pr-dose"><b>5–10 mg per arteria polmonare</b> (totale studiato 4–24 mg su 2–24 h)</td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>&lt;5 mg/PA <span class="cor cor-3nb">3: No Benefit</span>. Anticoagulazione concomitante <span class="cor cor-1">1</span> <span class="loe">C-LD</span></td></tr>
+    <tr><td class="pr-mol">NO inalatorio</td><td class="pr-dose">Dose <span class="verif">DA VERIFICARE</span></td><td class="pr-rene">Non applicabile: la dose stessa è <span class="verif">DA VERIFICARE</span></td><td>C2–E, per ridurre il postcarico del VD <span class="cor cor-2b">2b</span>&#8288;; endpoint primario dell'RCT negativo</td></tr>
   </tbody></table></div>
   <div class="renelive" data-rene="t2"></div>
 
@@ -648,32 +655,32 @@ html.js.motore-ko #nomotore{display:block}
   <table class="pront">
   <thead><tr><th style="width:26%">Fattore scatenante</th><th style="width:34%">Esempi</th><th>Condotta</th></tr></thead>
   <tbody>
-    <tr><td class="pr-mol">Maggiore reversibile</td><td>Chirurgia in anestesia generale ≥30 min · ricovero ≥72h a letto · taglio cesareo · frattura arto inferiore</td><td><strong>Sospendere</strong> a 3–6 mesi <span class="cor cor-1">I</span> <span class="loe">B-NR</span></td></tr>
-    <tr><td class="pr-mol">Minore reversibile</td><td>Chirurgia &lt;30 min · ricovero &lt;72h · malattia acuta domiciliare ≥72h a letto · estrogeni · puerperio · trauma con immobilità ≥72h</td><td><strong>Decisione condivisa</strong> <span class="cor cor-2a">IIa</span> <span class="loe">B-NR</span></td></tr>
-    <tr><td class="pr-mol">Persistente</td><td>Neoplasia attiva · malattia autoimmune · MICI · immobilità cronica</td><td><strong>Proseguire</strong> in fase estesa <span class="cor cor-1">I</span> <span class="loe">C-LD</span></td></tr>
-    <tr><td class="pr-mol">Nessun fattore identificabile</td><td>EP non provocata (recidiva ~30–40% a 10 anni)</td><td><strong>Proseguire</strong> in fase estesa <span class="cor cor-1">I</span> <span class="loe">A</span></td></tr>
-    <tr><td class="pr-mol">Fase estesa — dose</td><td>Apixaban <b>2,5 mg ×2/die</b> o rivaroxaban <b>10 mg/die</b></td><td>Dose dimezzata <strong>raccomandata</strong> <span class="cor cor-1">I</span> <span class="loe">A</span> (RENOVE) — non è una seconda scelta</td></tr>
-    <tr><td class="pr-mol">Fase estesa — neoplasia</td><td>Apixaban 5 mg ×2/die o rivaroxaban 20 mg/die; API-CAT supporta anche 2,5 mg ×2</td><td>DOAC o EBPM preferiti al VKA <span class="cor cor-1">I</span> <span class="loe">A</span></td></tr>
+    <tr><td class="pr-mol">Maggiore reversibile</td><td>Chirurgia in anestesia generale ≥30 min · ricovero ≥72h a letto · taglio cesareo · frattura arto inferiore</td><td><strong>Sospendere</strong> a 3–6 mesi <span class="cor cor-1">1</span> <span class="loe">B-NR</span></td></tr>
+    <tr><td class="pr-mol">Minore reversibile</td><td>Chirurgia &lt;30 min · ricovero &lt;72h · malattia acuta domiciliare ≥72h a letto · estrogeni · puerperio · trauma con immobilità ≥72h</td><td><strong>Decisione condivisa</strong> <span class="cor cor-2a">2a</span> <span class="loe">B-NR</span></td></tr>
+    <tr><td class="pr-mol">Persistente</td><td>Neoplasia attiva · malattia autoimmune · MICI · immobilità cronica</td><td><strong>Proseguire</strong> in fase estesa <span class="cor cor-1">1</span> <span class="loe">C-LD</span></td></tr>
+    <tr><td class="pr-mol">Nessun fattore identificabile</td><td>EP non provocata (recidiva ~30–40% a 10 anni)</td><td><strong>Proseguire</strong> in fase estesa <span class="cor cor-1">1</span> <span class="loe">A</span></td></tr>
+    <tr><td class="pr-mol">Fase estesa — dose</td><td>Apixaban <b>2,5 mg ×2/die</b> o rivaroxaban <b>10 mg/die</b></td><td>Dose dimezzata <strong>raccomandata</strong> <span class="cor cor-1">1</span> <span class="loe">A</span> (RENOVE) — non è una seconda scelta</td></tr>
+    <tr><td class="pr-mol">Fase estesa — neoplasia</td><td>Apixaban 5 mg ×2/die o rivaroxaban 20 mg/die; API-CAT supporta anche 2,5 mg ×2</td><td>DOAC o EBPM preferiti al VKA <span class="cor cor-1">1</span> <span class="loe">A</span></td></tr>
   </tbody></table></div>
 
   <div class="subsection-label">Follow-up dopo la dimissione — vale per tutti <span style="font-size:11px;font-weight:400;color:var(--text-muted)">(§5.1.1, §6.1)</span></div>
   <div class="step"><div class="step-n">1</div><div>
     <div class="step-t">Entro 7 giorni dalla dimissione — contatto o visita</div>
-    <div class="step-d">Educazione del paziente, rimozione delle barriere alla terapia, verifica dell'aderenza, ricerca attiva di sanguinamenti. <span class="cor cor-1">I</span> <span class="loe">C-LD</span></div></div></div>
+    <div class="step-d">Educazione del paziente, rimozione delle barriere alla terapia, verifica dell'aderenza, ricerca attiva di sanguinamenti. <span class="cor cor-1">1</span> <span class="loe">C-LD</span></div></div></div>
   <div class="step"><div class="step-n">2</div><div>
     <div class="step-t">Al 3° mese — la visita che decide la durata</div>
-    <div class="step-d">Discutere la durata dell'anticoagulazione secondo la Tabella 9, rivalutare la necessità di ulteriori test, valutare i sintomi persistenti. <span class="cor cor-1">I</span> <span class="loe">C-EO</span></div>
-    <div class="step-dose"><b>Ecocardiogramma di controllo:</b> se l'eco in fase acuta era <b>normale</b>, ripeterlo a 3–6 mesi ha <b>basso rendimento e può essere omesso</b>. Se era alterato, o se a ≥3 mesi persistono dispnea o limitazione funzionale: <b>TTE + scintigrafia perfusionale</b> (non TTE isolato) <span class="cor cor-2a">IIa</span> <span class="loe">B-NR</span>&#8288;, con valutazione per CTEPD <span class="cor cor-1">I</span> <span class="loe">B-NR</span>&#8288;.</div></div></div>
+    <div class="step-d">Discutere la durata dell'anticoagulazione secondo la Tabella 9, rivalutare la necessità di ulteriori test, valutare i sintomi persistenti. <span class="cor cor-1">1</span> <span class="loe">C-EO</span></div>
+    <div class="step-dose"><b>Ecocardiogramma di controllo:</b> se l'eco in fase acuta era <b>normale</b>, ripeterlo a 3–6 mesi ha <b>basso rendimento e può essere omesso</b>. Se era alterato, o se a ≥3 mesi persistono dispnea o limitazione funzionale: <b>TTE + scintigrafia perfusionale</b> (non TTE isolato) <span class="cor cor-2a">2a</span> <span class="loe">B-NR</span>&#8288;, con valutazione per CTEPD <span class="cor cor-1">1</span> <span class="loe">B-NR</span>&#8288;.</div></div></div>
   <div class="step"><div class="step-n">3</div><div>
     <div class="step-t">A ogni visita per almeno 1 anno</div>
-    <div class="step-d">Chiedere <strong>attivamente</strong> sintomi EP-correlati e limitazioni funzionali: è lo screening per la CTEPD (CTEPH ~3% dopo EP acuta, diagnosi spesso ritardata). <span class="cor cor-1">I</span> <span class="loe">C-LD</span> · Questionari per ansia/depressione ragionevoli <span class="cor cor-2a">IIa</span>&#8288;.</div></div></div>
+    <div class="step-d">Chiedere <strong>attivamente</strong> sintomi EP-correlati e limitazioni funzionali: è lo screening per la CTEPD (CTEPH ~3% dopo EP acuta, diagnosi spesso ritardata). <span class="cor cor-1">1</span> <span class="loe">C-LD</span> · Questionari per ansia/depressione ragionevoli <span class="cor cor-2a">2a</span>&#8288;.</div></div></div>
   <div class="step warn"><div class="step-n">4</div><div>
     <div class="step-t">EP senza fattore di rischio identificabile</div>
-    <div class="step-d">Anamnesi accurata, esame obiettivo e <strong>screening oncologico età-appropriato</strong> secondo le linee guida nazionali <span class="cor cor-1">I</span> <span class="loe">A</span> (incidenza di neoplasia 4–10% nel primo anno). Trombofilia solo se &lt;55 anni o familiarità <em>e</em> se il risultato cambia la gestione <span class="cor cor-2b">IIb</span> — mai i test coagulativi in fase acuta.</div></div></div>
+    <div class="step-d">Anamnesi accurata, esame obiettivo e <strong>screening oncologico età-appropriato</strong> secondo le linee guida nazionali <span class="cor cor-1">1</span> <span class="loe">A</span> (incidenza di neoplasia 4–10% nel primo anno). Trombofilia solo se &lt;55 anni o familiarità <em>e</em> se il risultato cambia la gestione <span class="cor cor-2b">2b</span> — mai i test coagulativi in fase acuta.</div></div></div>
   <div class="nodo"><div class="nodo-t">✗ Non fare, nel follow-up</div><ul>
-    <li>Imaging esteso di routine (TC total-body, PET-TC) per neoplasia occulta <span class="cor cor-3nb">III</span> No Benefit <span class="loe">A</span></li>
-    <li>CTPA o scintigrafia di controllo in paziente asintomatico solo per «vedere se si è sciolto» <span class="cor cor-3nb">III</span> No Benefit <span class="loe">B-NR</span></li>
-    <li>Sospendere l'anticoagulazione durante la valutazione per CTEPD <span class="cor cor-1">I</span> <span class="loe">B-NR</span> (proseguirla)</li>
+    <li>Imaging esteso di routine (TC total-body, PET-TC) per neoplasia occulta <span class="cor cor-3nb">3: No Benefit</span> <span class="loe">A</span></li>
+    <li>CTPA o scintigrafia di controllo in paziente asintomatico solo per «vedere se si è sciolto» <span class="cor cor-3nb">3: No Benefit</span> <span class="loe">B-NR</span></li>
+    <li>Sospendere l'anticoagulazione durante la valutazione per CTEPD <span class="cor cor-1">1</span> <span class="loe">B-NR</span> (proseguirla)</li>
   </ul></div>
 
   </div><!-- /ref-aha -->
@@ -699,10 +706,10 @@ html.js.motore-ko #nomotore{display:block}
   <table class="pront">
   <thead><tr><th style="width:19%">Molecola</th><th style="width:34%">Regime</th><th style="width:17%">Rene</th><th>Nota</th></tr></thead>
   <tbody>
-    <tr><td class="pr-mol">rt-PA<span>standard</span></td><td class="pr-dose"><b>100 mg in 2 ore</b></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Somministrazione accelerata preferita alle infusioni prolungate di streptochinasi e urochinasi</td></tr>
-    <tr><td class="pr-mol">rt-PA<span>accelerato</span></td><td class="pr-dose"><b>0,6 mg/kg in 15 min</b> (dose massima 50 mg) → <span class="dose-live" data-mg="0.6" data-cap="50"></span></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Regime accelerato per l'EP: <strong>non ufficialmente approvato</strong>, usato talvolta nell'instabilità emodinamica estrema come l'arresto cardiaco</td></tr>
-    <tr><td class="pr-mol">Streptochinasi</td><td class="pr-dose"><b>250 000 UI</b> in 30 min come carico, poi <b>100 000 UI/h</b> per 12–24 h<br>Accelerato: <b>1,5 milioni UI in 2 h</b></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>L'UFH <strong>va sospesa</strong> durante l'infusione</td></tr>
-    <tr><td class="pr-mol">Urochinasi</td><td class="pr-dose"><b>4400 UI/kg</b> in 10 min come carico, poi <b>4400 UI/kg/h</b> per 12–24 h<br>Accelerato: <b>3 milioni UI in 2 h</b></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>L'UFH <strong>va sospesa</strong> durante l'infusione</td></tr>
+    <tr><td class="pr-mol">rt-PA<span>standard</span></td><td class="pr-dose"><b>100 mg in 2 ore</b></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Somministrazione accelerata preferita alle infusioni prolungate di streptochinasi e urochinasi</td></tr>
+    <tr><td class="pr-mol">rt-PA<span>accelerato</span></td><td class="pr-dose"><b>0,6 mg/kg in 15 min</b> (dose massima 50 mg) → <span class="dose-live" data-mg="0.6" data-cap="50"></span></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Regime accelerato per l'EP: <strong>non ufficialmente approvato</strong>, usato talvolta nell'instabilità emodinamica estrema come l'arresto cardiaco</td></tr>
+    <tr><td class="pr-mol">Streptochinasi</td><td class="pr-dose"><b>250 000 UI</b> in 30 min come carico, poi <b>100 000 UI/h</b> per 12–24 h<br>Accelerato: <b>1,5 milioni UI in 2 h</b></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>L'UFH <strong>va sospesa</strong> durante l'infusione</td></tr>
+    <tr><td class="pr-mol">Urochinasi</td><td class="pr-dose"><b>4400 UI/kg</b> in 10 min come carico, poi <b>4400 UI/kg/h</b> per 12–24 h<br>Accelerato: <b>3 milioni UI in 2 h</b></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>L'UFH <strong>va sospesa</strong> durante l'infusione</td></tr>
   </tbody></table></div>
   <div class="renelive" data-rene="t3"></div>
   <div class="box box-warn"><span class="prov prov-fonte">Fonte</span>
@@ -725,9 +732,9 @@ html.js.motore-ko #nomotore{display:block}
     <tr><td class="pr-mol">NOAC<span>emivita e rene</span></td><td class="pr-dose">Picco: apixaban 1–2 h · dabigatran 1–3 h · edoxaban 1–2 h · rivaroxaban 2–4 h<br>Emivita: 8–14 · 14–17 · 5–11 · 7–11 h<br>Eliminazione renale: <b>27% · 80% · 50% · 33%</b></td><td class="pr-rene">L’ordine di prudenza in IRC è questo: dabigatran 80% &gt; edoxaban 50% &gt; rivaroxaban 33% &gt; apixaban 27% <span class="prov prov-fonte">fonte</span></td><td>Antidoti: <strong>idarucizumab</strong> per dabigatran, <strong>andexanet</strong> per gli anti-Xa</td></tr>
     <tr><td class="pr-mol">NOAC<span>interazioni</span></td><td class="pr-dose">Apixaban e rivaroxaban: <strong>non raccomandati</strong> con inibitori forti di <em>entrambi</em> CYP3A4 e P-gp (azoli, inibitori delle proteasi HIV); gli induttori forti (rifampicina, fenitoina, carbamazepina, fenobarbital, erba di S. Giovanni) riducono l'esposizione di apixaban di circa il 50%.<br>Dabigatran: <strong>controindicati</strong> gli inibitori forti della P-gp (ketoconazolo sistemico, ciclosporina, itraconazolo, dronedarone); tacrolimus non raccomandato.<br>Edoxaban: con ciclosporina, dronedarone, eritromicina o ketoconazolo la dose raccomandata è <b>30 mg</b> ×1/die.</td><td class="pr-rene">Dabigatran + inibitore forte della P-gp è escluso già con <b>ClCr &lt;50</b> <span class="prov prov-fonte">Suppl. Tab. 8</span></td><td>Da evitare in tutti i casi: se sono probabili trombolisi o embolectomia, in dialisi, con rischio emorragico significativo, con altro anticoagulante concomitante, in gravidanza e allattamento</td></tr>
     <tr><td class="pr-mol">Warfarin</td><td class="pr-dose"><b>10 mg</b> se giovane e altrimenti sano (&lt;60 anni), <b>≤5 mg</b> se più anziano; poi titolazione sull'INR in 5–7 giorni</td><td class="pr-rene">Nessuno sulla dose: si titola sull’<b>INR</b> <span class="prov prov-fonte">fonte</span></td><td>Sovrapposizione al parenterale fino a <b>INR 2,5 (2,0–3,0)</b> per 2 giorni consecutivi <span class="cor cor-1">I</span> <span class="loe">A</span></td></tr>
-    <tr><td class="pr-mol">Noradrenalina</td><td class="pr-dose"><b>0,2–1,0 µg/kg/min</b>, 8 mg in 50 mL → <span class="dose-live" data-drug="noradrenalina" data-dose="0.2-1.0"></span></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Limitata allo shock cardiogeno; l'eccesso di vasocostrizione peggiora la perfusione tissutale</td></tr>
-    <tr><td class="pr-mol">Dobutamina</td><td class="pr-dose"><b>2–20 µg/kg/min</b>, 250 mg in 50 mL → <span class="dose-live" data-drug="dobutamina" data-dose="2-20"></span></td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Da sola può aggravare l'ipotensione e innescare aritmie; può peggiorare il mismatch V/Q</td></tr>
-    <tr><td class="pr-mol">Adrenalina</td><td class="pr-dose">Nell'arresto cardiaco</td><td class="pr-rene">Nessuno <span class="prov prov-fonte">fonte</span></td><td>Nota <em>a</em> della Tabella 9: l'adrenalina si usa nell'arresto</td></tr>
+    <tr><td class="pr-mol">Noradrenalina</td><td class="pr-dose"><b>0,2–1,0 µg/kg/min</b>, 8 mg in 50 mL → <span class="dose-live" data-drug="noradrenalina" data-dose="0.2-1.0"></span></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Limitata allo shock cardiogeno; l'eccesso di vasocostrizione peggiora la perfusione tissutale</td></tr>
+    <tr><td class="pr-mol">Dobutamina</td><td class="pr-dose"><b>2–20 µg/kg/min</b>, 250 mg in 50 mL → <span class="dose-live" data-drug="dobutamina" data-dose="2-20"></span></td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Da sola può aggravare l'ipotensione e innescare aritmie; può peggiorare il mismatch V/Q</td></tr>
+    <tr><td class="pr-mol">Adrenalina</td><td class="pr-dose">Nell'arresto cardiaco</td><td class="pr-rene">La fonte non dà un aggiustamento renale <span class="verif">DA VERIFICARE</span></td><td>Nota <em>a</em> della Tabella 9: l'adrenalina si usa nell'arresto</td></tr>
     <tr><td class="pr-mol">Fluidi</td><td class="pr-dose">Fisiologica o Ringer lattato, <b>≤500 mL in 15–30 min</b></td><td class="pr-rene">Nessuno sulla dose. Con oliguria o anuria <b>non ripetere il bolo al buio</b> <span class="prov prov-integr">integrazione</span></td><td>Solo se pressione venosa centrale normale o bassa. Se è elevata, <strong>fermarsi</strong></td></tr>
     <tr><td class="pr-mol">Aspirina o sulodexide</td><td class="pr-dose">Aspirina <b>100 mg/die</b> negli studi di confronto · sulodexide <b>250 ULS ×2 capsule ×2/die</b></td><td class="pr-rene">Aspirina: cautela in IRC avanzata <span class="prov prov-integr">integrazione</span> · sulodexide <span class="verif">DA VERIFICARE</span></td><td>Solo in chi rifiuta o non tollera qualunque anticoagulante orale <span class="cor cor-2b">IIb</span> <span class="loe">B</span></td></tr>
   </tbody></table></div>
@@ -876,9 +883,9 @@ html.js.motore-ko #nomotore{display:block}
     s.ipo = (s.lat!==null && s.lat>2) || s.ipDiur || s.ipCreat || s.ipCi;
     s.ipoList=[];
     if(s.lat!==null&&s.lat>2) s.ipoList.push("lattato "+nf(s.lat)+" mmol/L");
-    if(s.ipDiur) s.ipoList.push("diuresi &lt;720 mL/24h");
-    if(s.ipCreat) s.ipoList.push("creatinina ↑ ≥0,3 mg/dL");
-    if(s.ipCi) s.ipoList.push("indice cardiaco ≤2,2");
+    if(s.ipDiur) s.ipoList.push("diuresi ridotta");
+    if(s.ipCreat) s.ipoList.push("danno renale acuto");
+    if(s.ipCi) s.ipoList.push("indice cardiaco ridotto");
     s.fragile=ck("sFragile"); s.ormoni=ck("sOrmoni"); s.phCron=ck("sPhCron");
     s.hestiaN=0; s.hestiaList=[];
     var hs=document.querySelectorAll(".hst");
@@ -890,6 +897,13 @@ html.js.motore-ko #nomotore{display:block}
 
     /* derivati */
     s.map = (s.pas!==null&&s.pad!==null) ? (s.pas+2*s.pad)/3 : null;
+    /* Shock normoteso: la fonte lo definisce due volte, nella nota della tabella dell'emodinamica
+       (p. e993: lattato, diuresi <720 mL/24 h, creatinina, indice cardiaco <=2,2) e nella nota §
+       della Fig. 2 (p. e990: in piu' stato mentale alterato, MAP <60, shock score in aumento).
+       Basta un marcatore qualsiasi delle due liste. */
+    if(s.ment){ s.ipo=true; s.ipoList.push("stato mentale alterato"); }
+    if(s.map!==null && s.map<60){ s.ipo=true; s.ipoList.push("MAP "+nf(s.map,0)+" mmHg (&lt;60)"); }
+    if(ck("ipScai")){ s.ipo=true; s.ipoList.push("stadio SCAI o punteggio CPES in aumento"); }
     s.bmi = (s.alt!==null&&s.alt>0) ? s.peso/Math.pow(s.alt/100,2) : null;
     /* Peso per Cockcroft-Gault: reale, oppure AGGIUSTATO se BMI >=30 - sul peso
        reale l'obeso sembra avere una clearance migliore di quella vera, e resterebbe
@@ -981,7 +995,7 @@ html.js.motore-ko #nomotore{display:block}
       r.cat="E1"; r.why.push("shock ostruttivo con ipoperfusione d'organo, compatibile con SCAI SHOCK C");
     } else if(s.emo==="pers"){
       if(s.ipo){ r.cat="E1"; r.why.push("ipotensione persistente <em>con</em> ipoperfusione d'organo ("+s.ipoList.join(", ")+"): è shock conclamato"); }
-      else { r.cat="D1"; r.why.push("ipotensione persistente senza segni di ipoperfusione d'organo — insufficienza cardiopolmonare incipiente"); r.note.push("Ipotensione <strong>persistente</strong> senza ipoperfusione: per AHA/ACC resta insufficienza incipiente (D), ma per <strong>ESC 2019 questo è già rischio alto</strong> (Tabella 4: ipotensione persistente). Se stai ragionando in ESC, cambia linea guida in alto."); }
+      else { r.cat="D1"; r.prov=true; r.why.push("ipotensione persistente senza segni di ipoperfusione d'organo"); r.note.push("Ipotensione <strong>persistente</strong> senza ipoperfusione: la Fig. 2 AHA/ACC <strong>non la classifica</strong> — la D1 è l'ipotensione transitoria o che risponde ai fluidi, la E1 quella con shock cardiogeno. Il tool la tiene in D1, provvisoria: è una <strong>lettura nostra</strong>, non della fonte. Per <strong>ESC 2019 è già rischio alto</strong> (Tabella 4: ipotensione persistente): se stai ragionando in ESC, cambia linea guida in alto."); }
     } else if(s.emo==="trans"){
       if(s.ipo){ r.cat="D2"; r.why.push("ipotensione transitoria/relativa <em>con</em> ipoperfusione d'organo ("+s.ipoList.join(", ")+")"); }
       else { r.cat="D1"; r.why.push("ipotensione transitoria o relativa, responsiva ai fluidi, senza segni di ipoperfusione d'organo"); }
@@ -1009,8 +1023,8 @@ html.js.motore-ko #nomotore{display:block}
           if(n===0) r.why.push("nessun marcatore positivo: né biomarcatore cardiaco né disfunzione del VD → C1");
           if(n===1) r.why.push("un marcatore positivo ("+(s.bio?"biomarcatore":"disfunzione del VD")+") → C2");
           if(n===2) r.why.push("entrambi i marcatori positivi (biomarcatore <em>e</em> disfunzione del VD) → C3");
-          if(!s.trop&&!s.bnp) r.note.push("Nessun biomarcatore cardiaco inserito. In categoria C la LG ne raccomanda almeno uno (troponina o BNP) <span class='cor cor-1'>I</span> <span class='loe'>B-NR</span> — la sottocategoria resta provvisoria finché non lo hai.");
-          if(!s.vd) r.note.push("Nessun parametro di disfunzione del VD inserito. In C–D l'imaging del VD è raccomandato <span class='cor cor-1'>I</span> <span class='loe'>A</span>&#8288;, con eco preferita alla TC <span class='cor cor-2a'>IIa</span> — la sottocategoria resta provvisoria finché non lo hai.");
+          if(!s.trop&&!s.bnp) r.note.push("Nessun biomarcatore cardiaco inserito. In categoria C la LG ne raccomanda almeno uno (troponina o BNP) <span class='cor cor-1'>1</span> <span class='loe'>B-NR</span> — la sottocategoria resta provvisoria finché non lo hai.");
+          if(!s.vd) r.note.push("Nessun parametro di disfunzione del VD inserito. In C–D l'imaging del VD è raccomandato <span class='cor cor-1'>1</span> <span class='loe'>A</span>&#8288;, con eco preferita alla TC <span class='cor cor-2a'>2a</span> — la sottocategoria resta provvisoria finché non lo hai.");
           if((!s.trop&&!s.bnp)||!s.vd) r.prov=true;
           if(s.hestiaN>=1 && (s.pesi===null||s.pesi<=85) && s.spesi===0){
             r.note.push("La categoria C qui è guidata <strong>solo</strong> dai criteri Hestia positivi ("+s.hestiaList.join("; ")+"): PESI e sPESI restano bassi. Se il criterio positivo è socio-logistico, il rischio clinico è basso ma <strong>il domicilio non è praticabile</strong>.");
@@ -1043,26 +1057,26 @@ html.js.motore-ko #nomotore{display:block}
       if(s.hestiaN>=1) return {k:"reparto", t:"RICOVERO IN REPARTO",
         d:"Hestia positivo ("+s.hestiaN+"/11): un solo criterio positivo, anche non emodinamico, esclude la gestione domiciliare."};
       if(s.vd||s.bio) return {k:"casa", t:"DOMICILIO POSSIBILE — con riserva",
-        d:"Score basso e Hestia 0/11 → trattamento ambulatoriale ragionevole (IIa, B-R). Ma il marcatore positivo colloca il paziente in un sottogruppo a rischio aumentato: leggi l'avviso qui sotto prima di dimettere."};
+        d:"Score basso e Hestia 0/11 → trattamento ambulatoriale ragionevole (2a, B-R). Ma il marcatore positivo colloca il paziente in un sottogruppo a rischio aumentato: leggi l'avviso qui sotto prima di dimettere."};
       return {k:"casa", t:"DOMICILIO POSSIBILE",
-        d:"Categorie A–B selezionate: trattamento ambulatoriale ragionevole rispetto al ricovero (IIa, B-R), a due condizioni — accesso immediato all'anticoagulante e follow-up rapido e affidabile."};
+        d:"Categorie A–B selezionate: trattamento ambulatoriale ragionevole rispetto al ricovero (2a, B-R), a due condizioni — accesso immediato all'anticoagulante e follow-up rapido e affidabile."};
     }
     if(cat==="C1"||cat==="C2") return {k:"reparto", t:"RICOVERO IN REPARTO con telemetria",
       d:"Paziente emodinamicamente stabile con score elevato: il rischio è il deterioramento nelle prime 24–72 ore, non l'instabilità di adesso. Serve un letto monitorato, non un letto qualsiasi."};
     if(cat==="C3"){
       if(s.map!==null&&s.map<80) return {k:"utic", t:"UTIC / SUB-INTENSIVA",
-        d:"C3 con MAP "+nf(s.map,0)+" mmHg: sotto 80 mmHg la LG segnala i pazienti che potrebbero richiedere escalation terapeutica (IIa, B-NR). Trattalo come un candidato all'escalation, non come uno stabile."};
+        d:"C3 con MAP "+nf(s.map,0)+" mmHg: sotto 80 mmHg la LG segnala i pazienti che potrebbero richiedere escalation terapeutica (2a, B-NR). Trattalo come un candidato all'escalation, non come uno stabile."};
       return {k:"sub", t:"SUB-INTENSIVA / UTIC",
-        d:"C3 = biomarcatore e disfunzione del VD entrambi positivi. È la popolazione del PEITHO, dove il collasso emodinamico è arrivato in media a 1,5–1,8 giorni dalla randomizzazione: monitoraggio ravvicinato per 24–72 ore."};
+        d:"C3 = biomarcatore e disfunzione del VD entrambi positivi. È la popolazione del PEITHO, dove il collasso emodinamico è arrivato in media a 1,5–1,79 giorni dalla randomizzazione: monitoraggio ravvicinato per 24–72 ore."};
     }
     if(cat==="D1") return {k:"utic", t:"UTIC",
       d:"Insufficienza cardiopolmonare incipiente: ipotensione transitoria o relativa. Serve monitoraggio continuo e disponibilità immediata di vasopressori e di terapia di riperfusione."};
     if(cat==="D2") return {k:"utic", t:"UTIC — subito",
-      d:"Ipoperfusione d'organo in atto"+(s.emo==="stabile"?" a pressione conservata (shock normoteso)":"")+": vasopressori e/o inotropi sono raccomandati (I, C-LD) e la finestra per intervenire è ora."};
+      d:"Ipoperfusione d'organo in atto"+(s.emo==="stabile"?" a pressione conservata (shock normoteso)":"")+": vasopressori e/o inotropi sono raccomandati (1, C-LD) e la finestra per intervenire è ora."};
     if(cat==="E1") return {k:"utic", t:"UTIC — attiva il PERT adesso",
-      d:"Shock cardiogeno da EP: è l'unica categoria in cui tutte e quattro le terapie avanzate raggiungono la classe IIa. Il tempo è la variabile."};
+      d:"Shock cardiogeno da EP: è l'unica categoria in cui tutte e quattro le terapie avanzate raggiungono la classe 2a. Il tempo è la variabile."};
     if(cat==="E2") return {k:"utic", t:"UTIC — shock refrattario",
-      d:"Trombolisi sistemica ragionevole (IIa); VA-ECMO ragionevole se le risorse lo consentono (IIa, B-NR). Il trasferimento prima della stabilizzazione è III Harm."};
+      d:"Trombolisi sistemica ragionevole (2a, C-LD); VA-ECMO ragionevole se le risorse lo consentono (2a, B-NR). Il trasferimento prima della stabilizzazione è 3: Harm (C-EO)."};
     return {k:"none", t:"—", d:""};
   }
 
@@ -1077,6 +1091,10 @@ html.js.motore-ko #nomotore{display:block}
     for(var i=0;i<items.length;i++) h+='<li>'+items[i]+'</li>';
     return h+'</ul></div>';
   }
+  /* ESC 2019 scrive I / IIa / IIb / III; AHA/ACC 2026 scrive 1 / 2a / 2b / 3: No Benefit / 3: Harm.
+     Due serie di costanti, e ogni funzione usa quella della sua linea guida: mai normalizzare. */
+  var A1='<span class="cor cor-1">1</span>&#8288;', A2A='<span class="cor cor-2a">2a</span>&#8288;', A2B='<span class="cor cor-2b">2b</span>&#8288;',
+      A3NB='<span class="cor cor-3nb">3: No Benefit</span>&#8288;', A3H='<span class="cor cor-3h">3: Harm</span>&#8288;';
   var I='<span class="cor cor-1">I</span>&#8288;', IIA='<span class="cor cor-2a">IIa</span>&#8288;', IIB='<span class="cor cor-2b">IIb</span>&#8288;',
       IIINB='<span class="cor cor-3nb">III</span> No Benefit', IIIH='<span class="cor cor-3h">III</span> Harm', III3='<span class="cor cor-3h">III</span>&#8288;';
   function loe(x){ return '<span class="loe">'+x+'</span>&#8288;'; }
@@ -1089,8 +1107,8 @@ html.js.motore-ko #nomotore{display:block}
     if(LG==="esc") return '<br><span class="prov prov-integr">centro spoke</span> <strong>'+cosa+': non in sede.</strong> '+
       'La raccomandazione stessa è condizionata — «<em>se competenza e risorse sono disponibili in sede</em>»: senza, la strada è la trombolisi sistemica, che hai, più il contatto immediato con il centro di riferimento. Non ritardare una terapia salvavita disponibile in loco per organizzare un trasferimento.';
     return '<br><span class="prov prov-integr">centro spoke</span> <strong>'+cosa+': non in sede.</strong> '+
-      'Attiva il PERT/hub di riferimento e discuti il trasferimento — ricordando che nelle categorie D–E stabili il trasferimento è <em>considerabile</em> '+IIB+' '+loe("C-LD")+
-      ', mentre nel paziente instabile (categoria E) trasferire prima di aver stabilizzato è '+IIIH+' '+loe("C-EO")+'.';
+      'Attiva il PERT/hub di riferimento e discuti il trasferimento — ricordando che nelle categorie C3–D, finché sono stabili, il trasferimento a un centro con terapie avanzate è <em>considerabile</em> '+A2B+' '+loe("C-LD")+
+      ', mentre nel paziente instabile (categoria E) trasferire prima di aver stabilizzato è '+A3H+' '+loe("C-EO")+'.';
   }
 
   /* ── anticoagulazione ── */
@@ -1099,25 +1117,25 @@ html.js.motore-ko #nomotore{display:block}
     if(s.acAss){
       h+=step("stop","✗","Controindicazione assoluta: non anticoagulare adesso",
         "Rivaluta la controindicazione a ogni turno: appena l'anticoagulazione è tollerata va iniziata, perché il filtro non la sostituisce.",
-        "<b>Filtro cavale</b> se ritenuto necessario in paziente che non tollera l'anticoagulazione: <b>retrievable</b> preferito al permanente "+I+" "+loe("B-R")+" · utile per ridurre la recidiva a breve termine "+IIA+" "+loe("B-R")+" · tentare la rimozione appena il rischio di EP scende e l'anticoagulante è tollerato "+I+" "+loe("C-LD")+" (finestra FDA 29–54 giorni; oltre 50 giorni i recuperi si complicano).");
-      h+=nodo(["Posizionare un filtro cavale di routine in un paziente <strong>efficacemente anticoagulato</strong> "+IIIH+" "+loe("A"),
+        "<b>Filtro cavale</b> se ritenuto necessario in paziente che non tollera l'anticoagulazione: <b>retrievable</b> preferito al permanente "+A1+" "+loe("B-R")+" · utile per ridurre la recidiva a breve termine "+A2A+" "+loe("B-R")+" · tentare la rimozione appena il rischio di EP scende e l'anticoagulante è tollerato "+A1+" "+loe("C-LD")+" (finestra FDA 29–54 giorni; oltre 50 giorni i recuperi si complicano).");
+      h+=nodo(["Posizionare un filtro cavale di routine in un paziente <strong>efficacemente anticoagulato</strong> "+A3H+" "+loe("A"),
                "Considerare il filtro un'alternativa definitiva all'anticoagulazione"]);
       return h;
     }
     h+=step("","1","Anticoagula appena la diagnosi è ragionevolmente certa",
-      "Senza controindicazione assoluta, l'anticoagulazione va iniziata per ridurre recidiva e mortalità "+I+" "+loe("B-R")+
-      (L>="C" ? ". In EP sospetta di categoria C2 o superiore con basso rischio emorragico, è utile anticoagulare <strong>mentre</strong> l'imaging è in ritardo o non accessibile "+IIA+" "+loe("C-EO")+"." : "."),
+      "Senza controindicazione assoluta, l'anticoagulazione va iniziata per ridurre recidiva e mortalità "+A1+" "+loe("B-R")+
+      (L>="C" ? ". In EP sospetta di categoria C2 o superiore con basso rischio emorragico, è utile anticoagulare <strong>mentre</strong> l'imaging è in ritardo o non accessibile "+A2A+" "+loe("C-EO")+"." : "."),
       null);
 
     /* parenterale */
     if(["C","D","E"].indexOf(L)>=0){
       h+=step("","2","Parenterale iniziale: EBPM, non UFH",
-        "Nelle categorie C1–E1 che necessitano di anticoagulante parenterale iniziale, l'EBPM è raccomandata sull'UFH per ridurre recidiva di TEV e sanguinamento maggiore "+I+" "+loe("B-R")+
-        ". Anche dopo procedura endovascolare o trombolisi, l'EBPM è preferita "+I+" "+loe("B-NR")+"; nei candidati a procedura endovascolare è ragionevole "+IIA+" "+loe("C-LD")+".",
+        "Nelle categorie C1–E1 che necessitano di anticoagulante parenterale iniziale, l'EBPM è raccomandata sull'UFH per ridurre recidiva di TEV e sanguinamento maggiore "+A1+" "+loe("B-R")+
+        ". Anche dopo procedura endovascolare o trombolisi, l'EBPM è preferita "+A1+" "+loe("B-NR")+"; nei candidati a procedura endovascolare è ragionevole "+A2A+" "+loe("C-LD")+".",
         "<b>Enoxaparina 1,0 mg/kg</b> sc ogni 12 h → <span class='dose-live' data-perkg='1' data-unit='mg'></span> · oppure <b>1,5 mg/kg</b> 1×/die → <span class='dose-live' data-perkg='1.5' data-unit='mg'></span> · <b>Fondaparinux</b> <span class='dose-live' data-fonda='1'></span> sc 1×/die"+
         "<br><span class='prov prov-fonte'>ESC 2019 · Suppl. Tab. 5</span> AHA/ACC non pubblica una tabella per singola EBPM: queste dosi vengono dal supplementare ESC. Tinzaparina 175 U/kg 1×/die · dalteparina 100 UI/kg ogni 12 h o 200 UI/kg 1×/die · nadroparina 86 UI/kg ogni 12 h o 171 UI/kg 1×/die."+
-        (s.bmi!==null&&s.bmi>40 ? "<br><b>BMI "+nf(s.bmi)+"</b> (classe III): ridurre la dose può essere ragionevole — <b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die su peso reale "+IIB+" "+loe("B-NR")+", da 1 piccolo RCT, non uno schema formalmente raccomandato." : "")+
-        (s.clcr!==null&&s.clcr<30 ? "<br><b>ClCr stimata "+nf(s.clcr,0)+" mL/min</b>: con EBPM in IRC severa è ragionevole monitorare l'anti-Xa (picco a 3–5 h dalla dose, a steady state) per guidare l'aggiustamento "+IIA+" "+loe("C-LD")+"." : ""));
+        (s.bmi!==null&&s.bmi>40 ? "<br><b>BMI "+nf(s.bmi)+"</b> (classe III): ridurre la dose può essere ragionevole — <b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die su peso reale "+A2B+" "+loe("B-NR")+", da 1 piccolo RCT, non uno schema formalmente raccomandato." : "")+
+        (s.clcr!==null&&s.clcr<30 ? "<br><b>ClCr stimata "+nf(s.clcr,0)+" mL/min</b>: con EBPM in IRC severa è ragionevole monitorare l'anti-Xa (picco a 3–5 h dalla dose, a steady state) per guidare l'aggiustamento "+A2A+" "+loe("C-LD")+"." : ""));
     } else {
       h+=step("","2","Puoi partire direttamente per bocca",
         "Apixaban e rivaroxaban non richiedono bridging parenterale. Dabigatran ed edoxaban sì: almeno 5 giorni di EBPM/UFH prima di iniziarli.",
@@ -1127,32 +1145,32 @@ html.js.motore-ko #nomotore{display:block}
     /* orale + popolazioni speciali */
     var scelta="", note=[];
     if(s.grav){
-      scelta="<b>EBPM o UFH</b> — DOAC e warfarin sono <strong>potenzialmente dannosi</strong> in gravidanza (aborto, anomalie fetali) "+IIIH+" "+loe("C-LD")+". EBPM/UFH raccomandati "+I+" "+loe("C-LD")+".";
-      note.push("Con EBPM in gravidanza l'utilità del monitoraggio anti-Xa almeno una volta per trimestre non è ben stabilita "+IIB+" "+loe("C-LD")+".");
+      scelta="<b>EBPM o UFH</b> — DOAC e warfarin sono <strong>potenzialmente dannosi</strong> in gravidanza (aborto, anomalie fetali) "+A3H+" "+loe("C-LD")+". EBPM/UFH raccomandati "+A1+" "+loe("C-LD")+".";
+      note.push("Con EBPM in gravidanza l'utilità del monitoraggio anti-Xa almeno una volta per trimestre non è ben stabilita "+A2B+" "+loe("C-LD")+".");
     } else if(s.aps){
-      scelta="<b>VKA</b> (warfarin) — nella sindrome da anticorpi antifosfolipidi trombotica conclamata il VKA è raccomandato <strong>sul</strong> DOAC "+I+" "+loe("A")+", per la prevenzione di trombosi venosa <em>e</em> arteriosa.";
+      scelta="<b>VKA</b> (warfarin) — nella sindrome da anticorpi antifosfolipidi trombotica conclamata il VKA è raccomandato <strong>sul</strong> DOAC "+A1+" "+loe("A")+", per la prevenzione di trombosi venosa <em>e</em> arteriosa.";
     } else if(s.child==="C"){
-      scelta="<b>VKA</b> — nell'epatopatia Child-Pugh C il DOAC <strong>non è raccomandato</strong> per l'aumentato rischio emorragico "+IIIH+" "+loe("C-LD")+".";
+      scelta="<b>VKA</b> — nell'epatopatia Child-Pugh C il DOAC <strong>non è raccomandato</strong> per l'aumentato rischio emorragico "+A3H+" "+loe("C-LD")+".";
     } else if(s.allatt){
-      scelta="<b>EBPM, UFH o warfarin</b> — preferiti al DOAC in allattamento, per evitare il sanguinamento nel lattante "+I+" "+loe("C-LD")+".";
+      scelta="<b>EBPM, UFH o warfarin</b> — preferiti al DOAC in allattamento, per evitare il sanguinamento nel lattante "+A1+" "+loe("C-LD")+".";
     } else {
-      scelta="<b>DOAC</b> — raccomandato sul VKA salvo controindicazione, per prevenire la recidiva e ridurre il sanguinamento maggiore "+I+" "+loe("B-R")+".";
-      if(s.aps1) note.push("APS con singolo anticorpo (anticardiolipina o β2-glicoproteina): un DOAC è alternativa ragionevole al VKA "+IIB+" "+loe("B-R")+" — non equivalente alla forma trombotica conclamata.");
-      if(s.tumCer) note.push("Tumore cerebrale primitivo o metastatico: un DOAC può essere considerato <strong>sull'</strong>EBPM per ridurre il rischio di emorragia intracranica "+IIB+" "+loe("C-LD")+".");
-      if(s.neo) note.push("Neoplasia attiva: in fase estesa DOAC o EBPM sono raccomandati sul VKA "+I+" "+loe("A")+".");
-      if(s.child==="A") note.push("Child-Pugh A: DOAC ragionevole sul VKA per ridurre il sanguinamento "+IIA+" "+loe("C-LD")+".");
-      if(s.child==="B") note.push("Child-Pugh B: DOAC <em>può</em> essere ragionevole sul VKA "+IIB+" "+loe("C-LD")+".");
-      if(s.bmi!==null&&s.bmi>30) note.push("BMI "+nf(s.bmi)+": DOAC ragionevole sul VKA se non controindicato "+IIA+" "+loe("B-NR")+".");
-      if(s.dial==="si"||(s.clcr!==null&&s.clcr<30)) note.push("IRC severa (stadio 4-5) o dialisi: è <strong>incerto</strong> se apixaban riduca il sanguinamento maggiore rispetto al VKA "+IIB+" "+loe("B-NR")+" — questi pazienti erano esclusi dai trial di fase 3. Escrezione renale: dabigatran 80%, edoxaban 50%, rivaroxaban 33%, apixaban 27%.");
-      else if(s.clcr!==null&&s.clcr<60) note.push("IRC lieve-moderata (stadio 2-3): DOAC raccomandato sul VKA per ridurre il sanguinamento maggiore "+I+" "+loe("A")+".");
+      scelta="<b>DOAC</b> — raccomandato sul VKA salvo controindicazione, per prevenire la recidiva e ridurre il sanguinamento maggiore "+A1+" "+loe("B-R")+".";
+      if(s.aps1) note.push("APS con singolo anticorpo (anticardiolipina o β2-glicoproteina): un DOAC è alternativa ragionevole al VKA "+A2B+" "+loe("B-R")+" — non equivalente alla forma trombotica conclamata.");
+      if(s.tumCer) note.push("Tumore cerebrale primitivo o metastatico: un DOAC può essere considerato <strong>sull'</strong>EBPM per ridurre il rischio di emorragia intracranica "+A2B+" "+loe("C-LD")+".");
+      if(s.neo) note.push("Neoplasia attiva: in fase estesa DOAC o EBPM sono raccomandati sul VKA "+A1+" "+loe("A")+".");
+      if(s.child==="A") note.push("Child-Pugh A: DOAC ragionevole sul VKA per ridurre il sanguinamento "+A2A+" "+loe("C-LD")+".");
+      if(s.child==="B") note.push("Child-Pugh B: DOAC <em>può</em> essere ragionevole sul VKA "+A2B+" "+loe("C-LD")+".");
+      if(s.bmi!==null&&s.bmi>30) note.push("BMI "+nf(s.bmi)+": DOAC ragionevole sul VKA se non controindicato "+A2A+" "+loe("B-NR")+".");
+      if(s.dial==="si"||(s.clcr!==null&&s.clcr<30)) note.push("IRC severa (stadio 4-5) o dialisi: è <strong>incerto</strong> se apixaban riduca il sanguinamento maggiore rispetto al VKA "+A2B+" "+loe("B-NR")+" — questi pazienti erano esclusi dai trial di fase 3. Escrezione renale: dabigatran 80%, edoxaban 50%, rivaroxaban 33%, apixaban 27%.");
+      else if(s.clcr!==null&&s.clcr<60) note.push("IRC lieve-moderata (stadio 2-3): DOAC raccomandato sul VKA per ridurre il sanguinamento maggiore "+A1+" "+loe("A")+".");
     }
     if(s.hit) note.push("<span class='prov prov-integr'>integrazione</span> Storia di HIT: eparina ed EBPM vanno evitate — la LG allegata non indica l'alternativa; usa il protocollo del tuo centro (inibitori diretti della trombina o fondaparinux).");
-    if(s.acRel) note.push("Alto rischio emorragico dichiarato: il filtro cavale può essere utile solo se l'anticoagulazione <strong>non è tollerata</strong> "+IIA+" "+loe("B-R")+", con dispositivo retrievable "+I+" "+loe("B-R")+" — non come aggiunta di routine a un paziente anticoagulato "+IIIH+" "+loe("A")+".");
+    if(s.acRel) note.push("Alto rischio emorragico dichiarato: il filtro cavale può essere utile solo se l'anticoagulazione <strong>non è tollerata</strong> "+A2A+" "+loe("B-R")+", con dispositivo retrievable "+A1+" "+loe("B-R")+" — non come aggiunta di routine a un paziente anticoagulato "+A3H+" "+loe("A")+".");
     h+=step("","3","Quale molecola, in questo paziente", scelta+(note.length?"<br><br>"+note.join("<br>"):""),
       "<b>Apixaban</b> 10 mg ×2/die × 7 gg → 5 mg ×2/die · <b>Rivaroxaban</b> 15 mg ×2/die × 21 gg → 20 mg ×1/die · <b>VKA</b>: overlap con parenterale fino a INR ≥2"+
       "<br><b>Dabigatran</b> 150 mg ×2/die e <b>edoxaban</b> 60 mg ×1/die (30 mg se ClCr 30–50 o peso &lt;60 kg), entrambi dopo ≥5 giorni di parenterale <span class='prov prov-fonte'>ESC 2019 · Suppl. Tab. 8</span>");
     h+=step("","4","Monitoraggio dell'anticoagulante",
-      "Nella maggior parte dei pazienti con EBPM a dose peso-adattata il monitoraggio di routine dell'anti-Xa <strong>non è indicato</strong> "+IIINB+" "+loe("A")+". Quando serve, il picco a 3–5 ore dalla dose a steady state (≥3 dosi) è preferito ai livelli di valle o random "+I+" "+loe("C-LD")+".",
+      "Nella maggior parte dei pazienti con EBPM a dose peso-adattata il monitoraggio di routine dell'anti-Xa <strong>non è indicato</strong> "+A3NB+" "+loe("A")+". Quando serve, il picco a 3–5 ore dalla dose a steady state (≥3 dosi) è preferito ai livelli di valle o random "+A1+" "+loe("C-LD")+".",
       null);
     return h;
   }
@@ -1162,59 +1180,59 @@ html.js.motore-ko #nomotore{display:block}
     var h='<div class="subsection-label">Riperfusione — c\'è indicazione?</div>';
     var lisiBlock = s.ctAss>0
       ? "<br><span class='prov prov-integr'>integrazione</span> <strong>"+s.ctAss+" controindicazione/i assoluta/e alla trombolisi selezionata/e</strong>: la lisi sistemica esce dal tavolo, resta l'opzione meccanica."
-      : (s.ctRel>0 ? "<br><span class='prov prov-integr'>integrazione</span> "+s.ctRel+" controindicazione/i relativa/e: valuta la dose ridotta (25–50 mg) "+IIB+" "+loe("C-LD")+" e discuti in PERT." : "");
+      : (s.ctRel>0 ? "<br><span class='prov prov-integr'>integrazione</span> "+s.ctRel+" controindicazione/i relativa/e: valuta la dose ridotta (25–50 mg) "+A2B+" "+loe("C-LD")+" e discuti in PERT." : "");
     if(cat==="A"||cat==="B"||cat==="C1"){
       h+=step("stop","✗","Nessuna terapia avanzata — e la trombolisi è dannosa",
-        "Nelle categorie A1–C2 la trombolisi sistemica <strong>non va utilizzata</strong> rispetto alla sola anticoagulazione, per l'aumento di sanguinamento maggiore e di emorragia intracranica "+IIIH+" "+loe("B-R")+" (in A–C1 "+loe("A")+"). CDL, trombectomia meccanica ed embolectomia chirurgica: "+IIINB+" "+loe("C-EO")+".",
+        "Nelle categorie A1–C2 la trombolisi sistemica <strong>non va utilizzata</strong> rispetto alla sola anticoagulazione, per l'aumento di sanguinamento maggiore e di emorragia intracranica "+A3H+" "+loe("B-R")+" (in A–C1 "+loe("A")+"). CDL, trombectomia meccanica ed embolectomia chirurgica: "+A3NB+" "+loe("C-EO")+".",
         null);
       return h;
     }
     if(cat==="C2"){
       h+=step("stop","✗","Trombolisi sistemica: no",
-        "In categoria C2 la trombolisi sistemica non va usata rispetto alla sola anticoagulazione "+IIIH+" "+loe("B-R")+".", null);
+        "In categoria C2 la trombolisi sistemica non va usata rispetto alla sola anticoagulazione "+A3H+" "+loe("B-R")+".", null);
       h+=step("warn","?","CDL e trombectomia meccanica: incerte",
-        "In C2 l'utilità di CDL e MT è incerta "+IIB+" "+loe("C-LD")+"; fra le due, l'utilità relativa non è stabilita "+IIB+" "+loe("B-R")+". Embolectomia chirurgica "+IIINB+" "+loe("C-EO")+"."+
-        (s.clot?"<br><strong>Clot-in-transit presente</strong>: da C3 in su le terapie avanzate diventano ragionevoli "+IIA+" "+loe("C-LD")+" — rivaluta la categoria e discuti in PERT.":"")+
+        "In C2 l'utilità di CDL e MT è incerta "+A2B+" "+loe("C-LD")+"; fra le due, l'utilità relativa non è stabilita "+A2B+" "+loe("B-R")+". Embolectomia chirurgica "+A3NB+" "+loe("C-EO")+"."+
+        (s.clot?"<br><strong>Clot-in-transit presente</strong>: da C3 in su le terapie avanzate diventano ragionevoli "+A2A+" "+loe("C-LD")+" — rivaluta la categoria e discuti in PERT.":"")+
         (disponibile("mt")?"":nonInSede("CDL/trombectomia meccanica")), null);
       return h;
     }
     if(cat==="C3"){
       h+=step("warn","1","Siamo nella zona grigia — decidila in PERT, non da solo",
-        "In C3 tutte le opzioni sono a incertezza dichiarata: trombolisi sistemica "+IIB+" "+loe("C-LD")+", CDL "+IIB+" "+loe("C-LD")+", MT "+IIB+" "+loe("C-LD")+". Embolectomia chirurgica "+IIINB+" "+loe("C-EO")+". Il trasferimento a un centro con terapie avanzate <em>può</em> essere considerato "+IIB+" "+loe("C-LD")+"."+lisiBlock+
-        (s.clot?"<br><strong>Clot-in-transit</strong>: qui le terapie avanzate rispetto alla sola anticoagulazione diventano ragionevoli "+IIA+" "+loe("C-LD")+".":"")+
+        "In C3 tutte le opzioni sono a incertezza dichiarata: trombolisi sistemica "+A2B+" "+loe("C-LD")+", CDL "+A2B+" "+loe("C-LD")+", MT "+A2B+" "+loe("C-LD")+". Embolectomia chirurgica "+A3NB+" "+loe("C-EO")+". Il trasferimento a un centro con terapie avanzate <em>può</em> essere considerato "+A2B+" "+loe("C-LD")+"."+lisiBlock+
+        (s.clot?"<br><strong>Clot-in-transit</strong>: qui le terapie avanzate rispetto alla sola anticoagulazione diventano ragionevoli "+A2A+" "+loe("C-LD")+".":"")+
         (disponibile("mt")?"":nonInSede("CDL/trombectomia meccanica")),
-        "Se scegli la lisi: <b>rt-PA 100 mg EV in 2 ore</b>, oppure dose ridotta <b>25–50 mg</b> "+IIB+" "+loe("C-LD")+". PEITHO in questa popolazione: sanguinamento extracranico 6,3% vs 1,2%, ictus 2,4% vs 0,2%.");
+        "Se scegli la lisi: <b>rt-PA 100 mg EV in 2 ore</b>, oppure dose ridotta <b>25–50 mg</b> "+A2B+" "+loe("C-LD")+". PEITHO in questa popolazione: sanguinamento extracranico 6,3% vs 1,2%, ictus 2,4% vs 0,2%.");
       h+=step("esc","2","Il trigger che cambia tutto",
-        "In C3 una <strong>MAP &lt;80 mmHg</strong> identifica i pazienti che potrebbero richiedere escalation "+IIA+" "+loe("B-NR")+
+        "In C3 una <strong>MAP &lt;80 mmHg</strong> identifica i pazienti che potrebbero richiedere escalation "+A2A+" "+loe("B-NR")+
         (s.map!==null?" — nel tuo paziente la MAP è <strong>"+nf(s.map,0)+" mmHg</strong>"+(s.map<80?": sei già oltre la soglia.":"."):" (inserisci PAS e PAD per calcolarla).")+
         " Nel registro italiano una MAP &lt;81,5 mmHg predice il deterioramento a 48 ore con sensibilità 77,5% e specificità 95,0%.", null);
       return h;
     }
     if(cat==="D1"||cat==="D2"){
-      h+=step("warn","1","Riperfusione: considerabile, tutta a classe IIb",
-        "Trombolisi sistemica <em>può essere considerata</em> per prevenire l'ulteriore deterioramento "+IIB+" "+loe("C-LD")+"; CDL e trombectomia meccanica "+IIB+" "+loe("B-NR")+"; embolectomia chirurgica "+IIB+" "+loe("C-LD")+". La scelta si fa in PERT."+lisiBlock+
-        (s.clot?"<br><strong>Clot-in-transit</strong>: terapie avanzate ragionevoli rispetto alla sola anticoagulazione "+IIA+" "+loe("C-LD")+".":"")+
+      h+=step("warn","1","Riperfusione: considerabile, tutta a classe 2b",
+        "Trombolisi sistemica <em>può essere considerata</em> per prevenire l'ulteriore deterioramento "+A2B+" "+loe("C-LD")+"; CDL e trombectomia meccanica "+A2B+" "+loe("B-NR")+"; embolectomia chirurgica "+A2B+" "+loe("C-LD")+". La scelta si fa in PERT."+lisiBlock+
+        (s.clot?"<br><strong>Clot-in-transit</strong>: terapie avanzate ragionevoli rispetto alla sola anticoagulazione "+A2A+" "+loe("C-LD")+".":"")+
         (disponibile("mt")?"":nonInSede("CDL/trombectomia meccanica")),
-        "<b>rt-PA 100 mg EV in 2 ore</b> o <b>25–50 mg</b> a dose ridotta "+IIB+" · CDL: <b>alteplase 5–10 mg per arteria polmonare</b> (&lt;5 mg/PA "+IIINB+" "+loe("B-NR")+"), con anticoagulazione concomitante "+I+" "+loe("C-LD")+"");
+        "<b>rt-PA 100 mg EV in 2 ore</b> o <b>25–50 mg</b> a dose ridotta "+A2B+" · CDL: <b>alteplase 5–10 mg per arteria polmonare</b> (&lt;5 mg/PA "+A3NB+" "+loe("B-NR")+"), con anticoagulazione concomitante "+A1+" "+loe("C-LD")+"");
       h+=step("esc","2","Se trombolizzi o fai CDL, il letto cambia",
-        "Chi riceve trombolisi sistemica o CDL va ricoverato in unità di monitoraggio ravvicinato — ICU o livello intermedio — per sorvegliare gli eventi avversi "+I+" "+loe("C-EO")+". Dopo trombectomia meccanica in paziente stabile è ragionevole un livello di cura con telemetria continua e personale esperto nelle complicanze del device "+IIA+" "+loe("B-R")+" (in PEERLESS oltre il 60% dei pazienti MT è stato gestito fuori dall'ICU).", null);
+        "Chi riceve trombolisi sistemica o CDL va ricoverato in unità di monitoraggio ravvicinato — ICU o livello intermedio — per sorvegliare gli eventi avversi "+A1+" "+loe("C-EO")+". Dopo trombectomia meccanica in paziente stabile è ragionevole un livello di cura con telemetria continua e personale esperto nelle complicanze del device "+A2A+" "+loe("B-R")+" (in PEERLESS oltre il 60% dei pazienti MT è stato gestito fuori dall'ICU).", null);
       return h;
     }
     if(cat==="E1"){
-      h+=step("esc","1","È l'unica categoria in cui tutto arriva a IIa — scegli e parti",
-        "Trombolisi sistemica + anticoagulazione, se il rischio emorragico è accettabile "+IIA+" "+loe("C-LD")+" · CDL "+IIA+" "+loe("C-LD")+" · trombectomia meccanica "+IIA+" "+loe("B-NR")+" · embolectomia chirurgica "+IIA+" "+loe("B-NR")+". La scelta dipende dal rischio emorragico e da che cosa hai in sede."+lisiBlock+
+      h+=step("esc","1","È l'unica categoria in cui tutto arriva a 2a — scegli e parti",
+        "Trombolisi sistemica + anticoagulazione, se il rischio emorragico è accettabile "+A2A+" "+loe("C-LD")+" · CDL "+A2A+" "+loe("C-LD")+" · trombectomia meccanica "+A2A+" "+loe("B-NR")+" · embolectomia chirurgica "+A2A+" "+loe("B-NR")+". La scelta dipende dal rischio emorragico e da che cosa hai in sede."+lisiBlock+
         (disponibile("mt")?"":nonInSede("CDL, trombectomia meccanica ed embolectomia chirurgica")),
-        "<b>rt-PA 100 mg EV in 2 ore</b> · dose ridotta <b>25–50 mg</b> "+IIB+" "+loe("C-LD")+" · CDL: <b>alteplase 5–10 mg per arteria polmonare</b><br>FLAME (categoria E1, N=115): endpoint composito 17% vs 63,9%, mortalità 1,9% vs 29,5% con trombectomia meccanica.");
+        "<b>rt-PA 100 mg EV in 2 ore</b> · dose ridotta <b>25–50 mg</b> "+A2B+" "+loe("C-LD")+" · CDL: <b>alteplase 5–10 mg per arteria polmonare</b><br>FLAME (categoria E1, N=115): endpoint composito 17% vs 63,9%, mortalità 1,9% vs 29,5% con trombectomia meccanica.");
       h+=step("stop","2","Non spostarlo prima di averlo stabilizzato",
-        "Nei pazienti instabili di categoria E il trasferimento interospedaliero prima della stabilizzazione è <strong>dannoso</strong> "+IIIH+" "+loe("C-EO")+". Una terapia salvavita disponibile in loco non va ritardata in attesa del trasporto.", null);
+        "Nei pazienti instabili di categoria E il trasferimento interospedaliero prima della stabilizzazione è <strong>dannoso</strong> "+A3H+" "+loe("C-EO")+". Una terapia salvavita disponibile in loco non va ritardata in attesa del trasporto.", null);
       return h;
     }
     if(cat==="E2"){
       h+=step("esc","1","Trombolisi sistemica e supporto meccanico",
-        "In E2 resta ragionevole la <strong>trombolisi sistemica</strong> "+IIA+" "+loe("C-LD")+". CDL e trombectomia meccanica: <strong>N/A</strong> — non studiate in questa categoria. L'embolectomia chirurgica in E2 <strong>senza</strong> supporto circolatorio meccanico non è raccomandata "+IIINB+" "+loe("B-NR")+"."+lisiBlock,
-        "<b>rt-PA 100 mg EV in 2 ore</b> (o dose ridotta 25–50 mg "+IIB+")");
+        "In E2 resta ragionevole la <strong>trombolisi sistemica</strong> "+A2A+" "+loe("C-LD")+". CDL e trombectomia meccanica: <strong>N/A</strong> — non studiate in questa categoria. L'embolectomia chirurgica in E2 <strong>senza</strong> supporto circolatorio meccanico non è raccomandata "+A3NB+" "+loe("B-NR")+"."+lisiBlock,
+        "<b>rt-PA 100 mg EV in 2 ore</b> (o dose ridotta 25–50 mg "+A2B+")");
       h+=step("esc","2","VA-ECMO",
-        "Nello shock cardiogeno refrattario è ragionevole istituire il VA-ECMO, se le risorse lo consentono, per stabilizzare emodinamica e ossigenazione "+IIA+" "+loe("B-NR")+". Sul VA-ECMO l'anticoagulazione sistemica va <strong>continuata</strong> in assenza di sanguinamento "+I+" "+loe("B-NR")+", rivalutando il bilancio di continuo — le complicanze emorragiche sono più frequenti di quelle trombotiche. L'utilità di terapie avanzate aggiuntive in chi è già su ECMO non è ben stabilita "+IIB+" "+loe("C-LD")+"."+
+        "Nello shock cardiogeno refrattario è ragionevole istituire il VA-ECMO, se le risorse lo consentono, per stabilizzare emodinamica e ossigenazione "+A2A+" "+loe("B-NR")+". Sul VA-ECMO l'anticoagulazione sistemica va <strong>continuata</strong> in assenza di sanguinamento "+A1+" "+loe("B-NR")+", rivalutando il bilancio di continuo — le complicanze emorragiche sono più frequenti di quelle trombotiche. L'utilità di terapie avanzate aggiuntive in chi è già su ECMO non è ben stabilita "+A2B+" "+loe("C-LD")+"."+
         (disponibile("ecmo")?"":nonInSede("VA-ECMO e cardiochirurgia")), null);
       return h;
     }
@@ -1228,7 +1246,7 @@ html.js.motore-ko #nomotore{display:block}
     var h='<div class="subsection-label">Supporto emodinamico e respiratorio</div>';
     if(cat==="D2"||L==="E"){
       h+=step("","1","Vasopressori e inotropi: raccomandati",
-        "Nello shock cardiogeno da EP (categorie D2–E2) l'uso di vasopressori e/o inotropi è raccomandato per migliorare gittata cardiaca e perfusione sistemica "+I+" "+loe("C-LD")+". La noradrenalina è l'agente di scelta; oltre i 15 µg/min le resistenze polmonari possono aumentare — <strong>aggiungi un secondo vasopressore invece di salire</strong>.",
+        "Nello shock cardiogeno da EP (categorie D2–E2) l'uso di vasopressori e/o inotropi è raccomandato per migliorare gittata cardiaca e perfusione sistemica "+A1+" "+loe("C-LD")+". La noradrenalina è l'agente di scelta; oltre i 15 µg/min le resistenze polmonari possono aumentare — <strong>aggiungi un secondo vasopressore invece di salire</strong>.",
         "<b>Noradrenalina</b> 0,05–0,5 µg/kg/min, 8 mg in 50 mL → <span class='dose-live' data-drug='noradrenalina' data-dose='0.05-0.5'></span>"+
         "<br>soglia dei <b>15 µg/min</b> = <span class='dose-live' data-drug='noradrenalina' data-dose='"+(15/(s.peso||75)).toFixed(4)+"'></span> per "+nf(s.peso,0)+" kg (≈ "+nf(15/(s.peso||75),2)+" µg/kg/min)"+
         "<br><b>Dobutamina</b> fino a 10 µg/kg/min, 250 mg in 50 mL → <span class='dose-live' data-drug='dobutamina' data-dose='2-10'></span>"+
@@ -1237,14 +1255,14 @@ html.js.motore-ko #nomotore{display:block}
     }
     if(cat==="D1"||cat==="D2"){
       h+=step("warn","2","Fluidi: piccoli, e solo se il precarico è davvero basso",
-        "Nelle categorie D1–2 con sospetto di precarico ridotto la gestione volemica <em>può</em> essere considerata "+IIB+" "+loe("C-LD")+". Il VD in EP acuta è preload-dipendente ma vulnerabile al sovraccarico: volumi maggiori o un carico indiscriminato vanno evitati.",
+        "Nelle categorie D1–2 con sospetto di precarico ridotto la gestione volemica <em>può</em> essere considerata "+A2B+" "+loe("C-LD")+". Il VD in EP acuta è preload-dipendente ma vulnerabile al sovraccarico: volumi maggiori o un carico indiscriminato vanno evitati.",
         "Boli ≤<b>500 mL</b> di cristalloide, rivalutando dopo ciascuno (dato da 1 studio su 13 pazienti)");
     }
     h+=step("","3","Ossigeno e ventilazione: il momento più pericoloso è l'induzione",
-      "Nell'ipossia moderata-severa la cannula nasale ad alto flusso riscaldata può essere di beneficio rispetto alla cannula standard "+IIA+" "+loe("C-LD")+". Nelle categorie C–E, sedazione profonda e ventilazione meccanica <strong>vanno evitate se non clinicamente indicate</strong> "+IIIH+" "+loe("C-LD")+": la sedazione abolisce il tono simpatico che sta mantenendo la perfusione e la ventilazione invasiva riduce il precarico e aumenta il postcarico del VD. Se devi intubare, vasopressori, inotropi e (dove disponibile) VA-ECMO devono essere <strong>già pronti</strong> "+I+" "+loe("C-LD")+".",
+      "Nell'ipossia moderata-severa la cannula nasale ad alto flusso riscaldata può essere di beneficio rispetto alla cannula standard "+A2A+" "+loe("C-LD")+". Nelle categorie C–E, sedazione profonda e ventilazione meccanica <strong>vanno evitate se non clinicamente indicate</strong> "+A3H+" "+loe("C-LD")+": la sedazione abolisce il tono simpatico che sta mantenendo la perfusione e la ventilazione invasiva riduce il precarico e aumenta il postcarico del VD. Se devi intubare, vasopressori, inotropi e (dove disponibile) VA-ECMO devono essere <strong>già pronti</strong> "+A1+" "+loe("C-LD")+".",
       "In due serie di embolectomia chirurgica, la rianimazione cardiopolmonare dopo induzione si è resa necessaria nel 19% e nel 28% dei casi — in pazienti <em>stabili</em> al momento dell'induzione.");
     h+=step("warn","4","Vasodilatatori polmonari inalatori",
-      "Nelle categorie C2–E possono essere considerati per ridurre il postcarico del VD "+IIB+" "+loe("B-R")+". L'RCT sul NO inalatorio ha mancato l'endpoint composito primario; il miglioramento di dimensioni e funzione del VD a 24 h viene da un'analisi post-hoc.",
+      "Nelle categorie C2–E possono essere considerati per ridurre il postcarico del VD "+A2B+" "+loe("B-R")+". L'RCT sul NO inalatorio ha mancato l'endpoint composito primario; il miglioramento di dimensioni e funzione del VD a 24 h viene da un'analisi post-hoc.",
       "Dose <span class='verif'>DA VERIFICARE</span> sul protocollo locale");
     return h;
   }
@@ -1254,47 +1272,47 @@ html.js.motore-ko #nomotore{display:block}
     var h='<div class="subsection-label">Monitoraggio e follow-up immediato</div>';
     if(dest.k==="casa"){
       h+=step("","1","Prima di firmare la dimissione — le due condizioni della linea guida",
-        "Il trattamento ambulatoriale è ragionevole "+IIA+" "+loe("B-R")+" solo se hai <strong>entrambe</strong>: accesso immediato al farmaco anticoagulante <em>e</em> follow-up rapido e affidabile da parte di personale esperto. Uno score negativo non sostituisce il giudizio clinico condiviso col paziente sugli obiettivi di cura.",
+        "Il trattamento ambulatoriale è ragionevole "+A2A+" "+loe("B-R")+" solo se hai <strong>entrambe</strong>: accesso immediato al farmaco anticoagulante <em>e</em> follow-up rapido e affidabile da parte di personale esperto. Uno score negativo non sostituisce il giudizio clinico condiviso col paziente sugli obiettivi di cura.",
         "Metanalisi di dati individuali sulla gestione ambulatoriale: mortalità a 30 giorni <b>0,30%</b>, recidiva di TEV <b>0,57%</b>, sanguinamento maggiore <b>0,45%</b>."+
         (s.hestiaN===0?"<br><span class='prov prov-integr'>controllo</span> Risultano <b>0/11 criteri Hestia</b> positivi: conferma di averli esaminati tutti e undici, incluso quello socio-logistico.":""));
       h+=step("","2","Visita entro 7 giorni — fissala adesso, non «appena può»",
-        "Il contatto clinico entro la prima settimana dalla dimissione è raccomandato "+I+" "+loe("C-LD")+": serve per educazione del paziente, rimozione delle barriere alla terapia, verifica dell'aderenza e rilevazione precoce di sanguinamenti.",
-        "<b>Entro 7 giorni</b>: visita o contatto strutturato · <b>3° mese</b>: la visita che decide la durata dell'anticoagulazione "+I+" "+loe("C-EO"));
+        "Il contatto clinico entro la prima settimana dalla dimissione è raccomandato "+A1+" "+loe("C-LD")+": serve per educazione del paziente, rimozione delle barriere alla terapia, verifica dell'aderenza e rilevazione precoce di sanguinamenti.",
+        "<b>Entro 7 giorni</b>: visita o contatto strutturato · <b>3° mese</b>: la visita che decide la durata dell'anticoagulazione "+A1+" "+loe("C-EO"));
       h+=step("","3","L'ecocardiogramma: quando ha senso ripeterlo",
-        "Se l'eco in fase acuta era <strong>normale</strong>, ripeterlo a 3–6 mesi ha basso rendimento diagnostico e <strong>può essere omesso</strong>. Se era alterato, o se a ≥3 mesi persistono dispnea o limitazione funzionale, la valutazione per CTEPD è raccomandata "+I+" "+loe("B-NR")+" e va fatta con <strong>TTE + scintigrafia perfusionale</strong>, non con TTE isolato "+IIA+" "+loe("B-NR")+"."+
+        "Se l'eco in fase acuta era <strong>normale</strong>, ripeterlo a 3–6 mesi ha basso rendimento diagnostico e <strong>può essere omesso</strong>. Se era alterato, o se a ≥3 mesi persistono dispnea o limitazione funzionale, la valutazione per CTEPD è raccomandata "+A1+" "+loe("B-NR")+" e va fatta con <strong>TTE + scintigrafia perfusionale</strong>, non con TTE isolato "+A2A+" "+loe("B-NR")+"."+
         (s.vd?"<br><strong>In questo paziente l'eco in acuto è alterato ("+s.vdList.join(", ")+")</strong>: l'eco di controllo a 3–6 mesi ha senso.":""),
-        "A ogni visita per almeno 1 anno: chiedi <b>attivamente</b> sintomi e limitazioni funzionali "+I+" "+loe("C-LD")+" — è lo screening per la CTEPD.");
+        "A ogni visita per almeno 1 anno: chiedi <b>attivamente</b> sintomi e limitazioni funzionali "+A1+" "+loe("C-LD")+" — è lo screening per la CTEPD.");
       h+=step("","4","Al 3° mese: quanto a lungo anticoagulare",
-        "La decisione si prende sul fattore scatenante (Tabella 9, più sotto): maggiore reversibile → sospendere a 3–6 mesi "+I+" "+loe("B-NR")+"; minore reversibile → decisione condivisa "+IIA+"; persistente o nessun fattore identificabile → fase estesa "+I+". In fase estesa la <strong>dose dimezzata</strong> di apixaban o rivaroxaban è raccomandazione di classe I, non una seconda scelta.",
-        (s.neo?"<b>Neoplasia attiva</b>: fattore di rischio persistente → fase estesa; DOAC o EBPM preferiti al VKA "+I+" "+loe("A")+".":"<b>Se non emerge alcun fattore di rischio</b>: anamnesi, esame obiettivo e screening oncologico età-appropriato "+I+" "+loe("A")+" — non imaging esteso "+IIINB+" "+loe("A")+"."));
+        "La decisione si prende sul fattore scatenante (Tabella 9, più sotto): maggiore reversibile → sospendere a 3–6 mesi "+A1+" "+loe("B-NR")+"; minore reversibile → decisione condivisa "+A2A+"; persistente o nessun fattore identificabile → fase estesa "+A1+". In fase estesa la <strong>dose dimezzata</strong> di apixaban o rivaroxaban è raccomandazione di classe 1, non una seconda scelta.",
+        (s.neo?"<b>Neoplasia attiva</b>: fattore di rischio persistente → fase estesa; DOAC o EBPM preferiti al VKA "+A1+" "+loe("A")+".":"<b>Se non emerge alcun fattore di rischio</b>: anamnesi, esame obiettivo e screening oncologico età-appropriato "+A1+" "+loe("A")+" — non imaging esteso "+A3NB+" "+loe("A")+"."));
       return h;
     }
     if(dest.k==="reparto"){
       h+=step("","1","La finestra critica è 24–72 ore",
-        "Nelle categorie C1–D il collasso emodinamico e le alterazioni di laboratorio si concentrano nelle prime 24–72 ore dalla diagnosi: è lì che il monitoraggio ravvicinato identifica chi ha bisogno di escalation <em>prima</em> che l'instabilità sia conclamata. Nel PEITHO il tempo medio all'endpoint primario è stato di 1,5–1,8 giorni.",
+        "Nelle categorie C1–D il collasso emodinamico e le alterazioni di laboratorio si concentrano nelle prime 24–72 ore dalla diagnosi: è lì che il monitoraggio ravvicinato identifica chi ha bisogno di escalation <em>prima</em> che l'instabilità sia conclamata. Nel PEITHO il tempo medio all'endpoint primario è stato di 1,5–1,79 giorni.",
         "Rivaluta la categoria a <b>ogni cambiamento clinico</b>: le categorie A–E non sono statiche, il paziente può transitare da C a D nel giro di ore.");
       h+=step("","2","Che cosa guardare, concretamente",
-        "<span class='prov prov-fonte'>fonte</span> Un biomarcatore cardiaco (troponina o BNP) è raccomandato in categoria C "+I+" "+loe("B-NR")+"; il <strong>lattato</strong>, venoso o arterioso, è raccomandato in C–E "+I+" "+loe("B-NR")+" e aggiunge informazione proprio nel normoteso, dove svela l'ipoperfusione subclinica. L'imaging del VD è raccomandato in C–D "+I+" "+loe("A")+", con eco preferita alla TC "+IIA+"; più parametri insieme rendono più di un singolo indice isolato."+
+        "<span class='prov prov-fonte'>fonte</span> Un biomarcatore cardiaco (troponina o BNP) è raccomandato in categoria C "+A1+" "+loe("B-NR")+"; il <strong>lattato</strong>, venoso o arterioso, è raccomandato in C–E "+A1+" "+loe("B-NR")+" e aggiunge informazione proprio nel normoteso, dove svela l'ipoperfusione subclinica. L'imaging del VD è raccomandato in C–D "+A1+" "+loe("A")+", con eco preferita alla TC "+A2A+"; più parametri insieme rendono più di un singolo indice isolato."+
         "<br><span class='prov prov-integr'>integrazione</span> In pratica: parametri vitali e saturazione con telemetria, diuresi, lattato e creatinina seriati, emocromo e piastrine, ricerca attiva di sanguinamenti.",
         "<b>Escalation se</b>: nuova ipotensione anche transitoria (→ categoria D) · lattato che non scende o diuresi in calo (→ D2, shock normoteso) · aumento del fabbisogno di O₂ (→ modificatore R) · comparsa di disfunzione del VD non presente all'ingresso (→ C2/C3).");
       h+=step("","3","Il PERT non è solo per i gravi",
-        "Il team multidisciplinare è raccomandato "+I+" per le categorie C–E, ma la soglia non è rigida: anche un paziente di categoria A o B con comorbilità multiple — per esempio un'emorragia intracranica — può beneficiare di una valutazione PERT.", null);
+        "Il team multidisciplinare è raccomandato "+A1+" per le categorie C–E, ma la soglia non è rigida: anche un paziente di categoria A o B con comorbilità multiple — per esempio un'emorragia intracranica — può beneficiare di una valutazione PERT.", null);
       h+=step("","4","Prima della dimissione",
-        "Rivedi i criteri Hestia con il paziente <em>dimissibile</em>, verifica l'accesso al farmaco, fissa il contatto <strong>entro 7 giorni</strong> "+I+" "+loe("C-LD")+" e la visita al <strong>3° mese</strong> "+I+" "+loe("C-EO")+", e programma l'eco di controllo solo se l'eco in acuto era alterato o i sintomi persistono.", null);
+        "Rivedi i criteri Hestia con il paziente <em>dimissibile</em>, verifica l'accesso al farmaco, fissa il contatto <strong>entro 7 giorni</strong> "+A1+" "+loe("C-LD")+" e la visita al <strong>3° mese</strong> "+A1+" "+loe("C-EO")+", e programma l'eco di controllo solo se l'eco in acuto era alterato o i sintomi persistono.", null);
       return h;
     }
     h+=step("","1","Le prime 24–72 ore decidono",
       "È la finestra in cui si concentrano collasso emodinamico e deterioramento di laboratorio. Monitoraggio continuo, rivalutazione della categoria a ogni cambiamento clinico: il transito D→E può avvenire in poche ore.",
       "<span class='prov prov-integr'>integrazione</span> In pratica: linea arteriosa, diuresi oraria, lattato seriato, ecocardiogramma di controllo dopo ogni cambio di strategia, emocromo e piastrine, sorveglianza del sito di accesso se procedura endovascolare.");
     h+=step("","2","I marcatori che devono scendere",
-      "Il lattato è raccomandato in C–E "+I+" "+loe("B-NR")+" ed è il parametro che dice se quello che stai facendo funziona. Nel paziente normoteso, ipoperfusione significa: lattato &gt;2 mmol/L, diuresi &lt;720 mL/24h, incremento di creatinina ≥0,3 mg/dL/24h, indice cardiaco ≤2,2 L/min/m²"+
+      "Il lattato è raccomandato in C–E "+A1+" "+loe("B-NR")+" ed è il parametro che dice se quello che stai facendo funziona. Nel paziente normoteso, ipoperfusione significa (le due definizioni della fonte, nota di p. e993 e Fig. 2): lattato &gt;2 mmol/L, diuresi &lt;720 mL/24 h o &lt;0,5 mL/kg/h, danno renale acuto (creatinina ↑ ≥0,3 mg/dL in 24 h), indice cardiaco ≤2,2 L/min/m², stato mentale alterato, MAP &lt;60 mmHg, shock score in aumento"+
       (s.ipo?" — nel tuo paziente sono positivi: <strong>"+s.ipoList.join(", ")+"</strong>.":"."), null);
     if(cat==="C3"||cat==="D1"||cat==="D2"){
       h+=step("esc","3","Chi riceve trombolisi o CDL resta in monitoraggio ravvicinato",
-        "Il ricovero in unità di monitoraggio ravvicinato (ICU o livello intermedio) è raccomandato per sorvegliare gli eventi avversi "+I+" "+loe("C-EO")+". Dopo trombectomia meccanica in paziente stabile, telemetria continua con personale esperto nelle complicanze del device è ragionevole "+IIA+" "+loe("B-R")+" — non necessariamente ICU.", null);
+        "Il ricovero in unità di monitoraggio ravvicinato (ICU o livello intermedio) è raccomandato per sorvegliare gli eventi avversi "+A1+" "+loe("C-EO")+". Dopo trombectomia meccanica in paziente stabile, telemetria continua con personale esperto nelle complicanze del device è ragionevole "+A2A+" "+loe("B-R")+" — non necessariamente ICU.", null);
     }
     h+=step("","4","Quando il paziente si stabilizza",
-      "Anticoagulazione parenterale iniziale con EBPM, preferita all'UFH dopo procedura endovascolare o trombolisi "+I+" "+loe("B-NR")+"; poi passaggio all'orale. Al momento della dimissione: contatto entro 7 giorni "+I+" "+loe("C-LD")+", visita al 3° mese "+I+" "+loe("C-EO")+", eco di controllo se l'eco in acuto era alterato o i sintomi persistono, e ricerca attiva dei sintomi a ogni visita per almeno 1 anno "+I+" "+loe("C-LD")+".", null);
+      "Anticoagulazione parenterale iniziale con EBPM, preferita all'UFH dopo procedura endovascolare o trombolisi "+A1+" "+loe("B-NR")+"; poi passaggio all'orale. Al momento della dimissione: contatto entro 7 giorni "+A1+" "+loe("C-LD")+", visita al 3° mese "+A1+" "+loe("C-EO")+", eco di controllo se l'eco in acuto era alterato o i sintomi persistono, e ricerca attiva dei sintomi a ogni visita per almeno 1 anno "+A1+" "+loe("C-LD")+".", null);
     return h;
   }
 
@@ -1302,34 +1320,34 @@ html.js.motore-ko #nomotore{display:block}
   function secNonFare(cat, s){
     var L=cat.charAt(0), it=[];
     if(L==="A"||L==="B"){
-      it.push("Trombolisi sistemica: "+IIIH+" "+loe("A")+" in queste categorie");
+      it.push("Trombolisi sistemica: "+A3H+" "+loe("A")+" in queste categorie");
       it.push("Dimettere senza aver garantito <strong>accesso immediato al farmaco</strong> e <strong>follow-up rapido</strong>: sono parte della raccomandazione, non un contorno");
       it.push("Confondere «basso rischio» (categoria B) con «subclinica» (categoria A): sono concetti distinti con implicazioni terapeutiche diverse");
       it.push("Dosare i test coagulativi di trombofilia in fase acuta: sono alterati dal consumo di fattori e dall'anticoagulante in corso");
     } else if(cat==="C1"||cat==="C2"){
-      it.push("Trombolisi sistemica: "+IIIH+" "+(cat==="C2"?loe("B-R"):loe("A")));
+      it.push("Trombolisi sistemica: "+A3H+" "+(cat==="C2"?loe("B-R"):loe("A")));
       it.push("Trattare «emodinamicamente stabile» come «sicuro»: nessuno score PE-specifico predice in modo affidabile il deterioramento");
       it.push("Fermarsi a un singolo parametro ecocardiografico: la combinazione di più parametri rende molto di più");
       it.push("Fidarsi di un setto interventricolare normale alla TC per escludere la disfunzione del VD: sensibilità 31%");
     } else if(cat==="C3"){
-      it.push("Aspettare l'ipotensione conclamata per muoversi: la MAP &lt;80 mmHg è già il segnale "+IIA);
+      it.push("Aspettare l'ipotensione conclamata per muoversi: la MAP &lt;80 mmHg è già il segnale "+A2A);
       it.push("Considerare la trombolisi una scelta neutra: in C3 l'utilità è <em>incerta</em> e il danno emorragico è documentato (PEITHO)");
       it.push("Interpretare una MAP «accettabile» isolata come rassicurante: va letta in serie nelle 24–72 ore");
-      it.push("Embolectomia chirurgica: "+IIINB+" "+loe("C-EO")+" in questa categoria");
+      it.push("Embolectomia chirurgica: "+A3NB+" "+loe("C-EO")+" in questa categoria");
     } else if(L==="D"){
       it.push("Carico di fluidi indiscriminato: boli ≤500 mL, il VD si sovraccarica");
-      it.push("Sedare o intubare senza avere vasopressori e inotropi già pronti "+I+" "+loe("C-LD"));
-      it.push("Sedazione profonda o ventilazione meccanica non indicate: "+IIIH+" "+loe("C-LD"));
+      it.push("Sedare o intubare senza avere vasopressori e inotropi già pronti "+A1+" "+loe("C-LD"));
+      it.push("Sedazione profonda o ventilazione meccanica non indicate: "+A3H+" "+loe("C-LD"));
       it.push("Trasferire senza aver prima somministrato la terapia salvavita disponibile in loco");
     } else if(cat==="E1"){
-      it.push("<strong>Trasferire prima di aver stabilizzato</strong>: "+IIIH+" "+loe("C-EO"));
+      it.push("<strong>Trasferire prima di aver stabilizzato</strong>: "+A3H+" "+loe("C-EO"));
       it.push("Ritardare una terapia salvavita disponibile in sede in attesa del trasporto");
       it.push("Salire indefinitamente con la noradrenalina oltre i 15 µg/min invece di aggiungere un secondo vasopressore");
       it.push("Indurre l'anestesia senza il supporto emodinamico pronto: nelle serie chirurgiche il 19–28% ha richiesto RCP dopo induzione");
     } else if(cat==="E2"){
-      it.push("Embolectomia chirurgica in E2 <strong>senza</strong> supporto circolatorio meccanico: "+IIINB+" "+loe("B-NR"));
-      it.push("Sospendere l'anticoagulazione sistemica sul VA-ECMO in assenza di sanguinamento: "+I+" "+loe("B-NR")+" dice di continuarla");
-      it.push("Trasferire il paziente instabile: "+IIIH+" "+loe("C-EO"));
+      it.push("Embolectomia chirurgica in E2 <strong>senza</strong> supporto circolatorio meccanico: "+A3NB+" "+loe("B-NR"));
+      it.push("Sospendere l'anticoagulazione sistemica sul VA-ECMO in assenza di sanguinamento: "+A1+" "+loe("B-NR")+" dice di continuarla");
+      it.push("Trasferire il paziente instabile: "+A3H+" "+loe("C-EO"));
       it.push("Considerare CDL o trombectomia meccanica un'opzione supportata: in E2 sono <strong>N/A</strong>, non studiate");
     }
     it.push("Trattare la categoria come un'etichetta fissa: va rivalutata a ogni cambiamento clinico");
@@ -1345,74 +1363,74 @@ html.js.motore-ko #nomotore{display:block}
     /* ─── ADESSO ─── */
     h+='<div class="tlbl">Adesso &middot; <b>in acuto</b></div>';
 
-    var cusQuando = "Ragionevole in due situazioni "+IIB+" "+loe("B-NR")+": <strong>segni clinici di TVP</strong>, oppure quando trovarla <strong>cambia gestione o prognosi</strong> — sospetta TVP iliofemorale candidabile a trattamento cateterismo-based, o necessità di un <strong>imaging basale</strong> prima di sospendere l'anticoagulazione. Non come adjunct sistematico: la TVP concomitante si trova nel 44–71% dei casi ma non modifica sistematicamente la gestione, e con CTPA da sola la recidiva a 3 mesi è la stessa (Righini 2008).";
+    var cusQuando = "Ragionevole in due situazioni "+A2B+" "+loe("B-NR")+": <strong>segni clinici di TVP</strong>, oppure quando trovarla <strong>cambia gestione o prognosi</strong> — sospetta TVP iliofemorale candidabile a trattamento cateterismo-based, o necessità di un <strong>imaging basale</strong> prima di sospendere l'anticoagulazione. Non come adjunct sistematico: la TVP concomitante si trova nel 44–71% dei casi ma non modifica sistematicamente la gestione, e con CTPA da sola la recidiva a 3 mesi è la stessa (Righini 2008).";
     if(s.acAss||s.acRel) cusQuando += "<br><span class='prov prov-integr'>in questo paziente</span> Stai valutando il filtro cavale: un'ecografia venosa basale documenta il carico trombotico di partenza e serve al confronto quando deciderai la rimozione.";
     h+=step("","1","Ecografia venosa arti inferiori (CUS)"+who("radiologia vascolare o POCUS in reparto"),
       cusQuando,
-      "<b>Non serve</b> se la CTPA è negativa o la V/Q SPECT è normale: il duplex non aggiunge valore diagnostico per l'EP "+IIINB+" "+loe("B-NR")+". La <b>CT-venografia</b> come adjunct sistematico alla CTPA non è raccomandata "+IIINB+" "+loe("B-R")+".");
+      "<b>Non serve</b> se la CTPA è negativa o la V/Q SPECT è normale: il duplex non aggiunge valore diagnostico per l'EP "+A3NB+" "+loe("B-NR")+". La <b>CT-venografia</b> come adjunct sistematico alla CTPA non è raccomandata "+A3NB+" "+loe("B-R")+".");
 
     h+=step("","2","Refertazione strutturata: chiedila esplicitamente"+who("radiologia · laboratorio di ecocardiografia"),
-      "Alla <strong>CTPA</strong>: rapporto <strong>RV/LV numerico</strong> (diametro interno, asse assiale o 4 camere ricostruito), non una stima soggettiva "+I+" "+loe("B-R")+". All'<strong>ecocardiogramma</strong>: pannello completo dei parametri di disfunzione del VD — RV/LV, TAPSE, PAPs stimata, segno di McConnell, velocità TR, collasso della cava "+I+" "+loe("B-NR")+". Chiedi anche la segnalazione dei <strong>reperti cronici</strong> alla CTPA (web intravascolari, retrazione o dilatazione dell'arteria polmonare, ipertrofia del VD): identificano oggi chi è a rischio di CTEPD domani "+IIB+" "+loe("B-NR")+".",
+      "Alla <strong>CTPA</strong>: rapporto <strong>RV/LV numerico</strong> (diametro interno, asse assiale o 4 camere ricostruito), non una stima soggettiva "+A1+" "+loe("B-R")+". All'<strong>ecocardiogramma</strong>: pannello completo dei parametri di disfunzione del VD — RV/LV, TAPSE, PAPs stimata, segno di McConnell, velocità TR, collasso della cava "+A1+" "+loe("B-NR")+". Chiedi anche la segnalazione dei <strong>reperti cronici</strong> alla CTPA (web intravascolari, retrazione o dilatazione dell'arteria polmonare, ipertrofia del VD): identificano oggi chi è a rischio di CTEPD domani "+A2B+" "+loe("B-NR")+".",
       "Un solo parametro ecocardiografico isolato rende meno della combinazione di più parametri. Alla TC, la deviazione settale è specifica al 98% ma sensibile solo al 31%: un setto normale non esclude la disfunzione del VD.");
 
     if(L==="C"||L==="D"||L==="E"){
       var lab=[];
-      if(!s.trop&&!s.bnp) lab.push("<strong>Almeno un biomarcatore cardiaco</strong> (troponina o BNP/NT-proBNP): raccomandato in categoria C "+I+" "+loe("B-NR")+" — e ti manca. La soglia di «elevato» dipende dal saggio del tuo laboratorio, non da un numero universale.");
-      if(s.lat===null) lab.push("<strong>Lattato</strong>, venoso o arterioso: raccomandato in C–E "+I+" "+loe("B-NR")+" — e ti manca. È il parametro che svela l'ipoperfusione nel paziente <em>normoteso</em>, cioè proprio dove non la vedi.");
-      if(!s.vd) lab.push("<strong>Imaging del VD</strong>: raccomandato in C–D "+I+" "+loe("A")+", con ecocardiografia preferita alla TC "+IIA+" "+loe("B-NR")+". Il POCUS al letto va bene se l'eco formale non è tempestivamente disponibile.");
+      if(!s.trop&&!s.bnp) lab.push("<strong>Almeno un biomarcatore cardiaco</strong> (troponina o BNP/NT-proBNP): raccomandato in categoria C "+A1+" "+loe("B-NR")+" — e ti manca. La soglia di «elevato» dipende dal saggio del tuo laboratorio, non da un numero universale.");
+      if(s.lat===null) lab.push("<strong>Lattato</strong>, venoso o arterioso: raccomandato in C–E "+A1+" "+loe("B-NR")+" — e ti manca. È il parametro che svela l'ipoperfusione nel paziente <em>normoteso</em>, cioè proprio dove non la vedi.");
+      if(!s.vd) lab.push("<strong>Imaging del VD</strong>: raccomandato in C–D "+A1+" "+loe("A")+", con ecocardiografia preferita alla TC "+A2A+" "+loe("B-NR")+". Il POCUS al letto va bene se l'eco formale non è tempestivamente disponibile.");
       if(lab.length) h+=step("warn","3","Quello che manca per completare la stratificazione"+who("laboratorio · ecocardiografia"),
         lab.join("<br><br>"), null);
     }
 
     var pre=[];
-    pre.push("<strong>Funzione renale ed epatica, emocromo con piastrine</strong>: non sono un contorno, decidono la molecola. IRC stadio 2-3 → DOAC sul VKA "+I+" "+loe("A")+"; stadio 4-5 o dialisi → beneficio di apixaban incerto "+IIB+"; Child-Pugh A → DOAC ragionevole "+IIA+", B → può essere ragionevole "+IIB+", C → DOAC <strong>non raccomandato</strong> "+IIIH+" "+loe("C-LD")+".");
-    if(fertile) pre.push("<span class='prov prov-integr'>integrazione</span> <strong>Test di gravidanza</strong> in donna in età fertile prima di impostare un DOAC: in gravidanza DOAC e warfarin sono potenzialmente dannosi "+IIIH+" "+loe("C-LD")+".");
+    pre.push("<strong>Funzione renale ed epatica, emocromo con piastrine</strong>: non sono un contorno, decidono la molecola. IRC stadio 2-3 → DOAC sul VKA "+A1+" "+loe("A")+"; stadio 4-5 o dialisi → beneficio di apixaban incerto "+A2B+"; Child-Pugh A → DOAC ragionevole "+A2A+", B → può essere ragionevole "+A2B+", C → DOAC <strong>non raccomandato</strong> "+A3H+" "+loe("C-LD")+".");
+    if(fertile) pre.push("<span class='prov prov-integr'>integrazione</span> <strong>Test di gravidanza</strong> in donna in età fertile prima di impostare un DOAC: in gravidanza DOAC e warfarin sono potenzialmente dannosi "+A3H+" "+loe("C-LD")+".");
     if(s.hit) pre.push("<span class='prov prov-integr'>integrazione</span> <strong>Conta piastrinica seriata e anticorpi anti-PF4</strong> per la storia di HIT che hai segnalato: la linea guida distillata non ne definisce il percorso, segui il protocollo del tuo laboratorio.");
     h+=step("","4","Esami ematici che cambiano la scelta del farmaco"+who("laboratorio"), pre.join("<br><br>"), null);
 
     /* ─── PRIMA DELLA DIMISSIONE ─── */
     h+='<div class="tlbl">Prima della dimissione &middot; <b>decide la durata</b></div>';
     h+=step("","5","La domanda che vale 3 mesi o tutta la vita: c'è un fattore scatenante?"+who("la fai tu, con l'anamnesi"),
-      "La durata dell'anticoagulazione non si decide sulla gravità dell'EP ma sul fattore scatenante (Tabella 9). <strong>Maggiore reversibile</strong> — chirurgia in anestesia generale ≥30 min, ricovero ≥72 h a letto, taglio cesareo, frattura di arto inferiore → sospendere a 3–6 mesi "+I+" "+loe("B-NR")+". <strong>Minore reversibile</strong> — chirurgia &lt;30 min, ricovero &lt;72 h, malattia acuta domiciliare ≥72 h a letto, estrogeni, puerperio, trauma con immobilità ≥72 h → decisione condivisa "+IIA+". <strong>Persistente</strong> — neoplasia attiva, malattia autoimmune, MICI, immobilità cronica → fase estesa "+I+". <strong>Nessuno</strong> → fase estesa "+I+" "+loe("A")+" (recidiva 30–40% a 10 anni).",
+      "La durata dell'anticoagulazione non si decide sulla gravità dell'EP ma sul fattore scatenante (Tabella 9). <strong>Maggiore reversibile</strong> — chirurgia in anestesia generale ≥30 min, ricovero ≥72 h a letto, taglio cesareo, frattura di arto inferiore → sospendere a 3–6 mesi "+A1+" "+loe("B-NR")+". <strong>Minore reversibile</strong> — chirurgia &lt;30 min, ricovero &lt;72 h, malattia acuta domiciliare ≥72 h a letto, estrogeni, puerperio, trauma con immobilità ≥72 h → decisione condivisa "+A2A+". <strong>Persistente</strong> — neoplasia attiva, malattia autoimmune, MICI, immobilità cronica → fase estesa "+A1+". <strong>Nessuno</strong> → fase estesa "+A1+" "+loe("A")+" (recidiva 30–40% a 10 anni).",
       "Cerca attivamente le malattie autoimmuni: comportano un rischio di recidiva <b>1,7 volte</b> superiore. E ricorda che un fattore persistente può cessare (neoplasia guarita): la decisione va rivista, non presa una volta sola.");
 
-    var onco = "Se <strong>non emerge alcun fattore di rischio</strong>: anamnesi accurata, esame obiettivo e <strong>screening oncologico età-appropriato</strong> secondo le linee guida nazionali sono raccomandati "+I+" "+loe("A")+". L'incidenza di neoplasia in questi pazienti è del <strong>4–10% nel primo anno</strong> e quasi metà delle diagnosi arriva proprio da anamnesi ed esame obiettivo accurati.";
-    onco += "<br><br><span class='prov prov-integr'>sull'eco addome</span> Non è parte dello screening raccomandato e non va chiesta di routine: l'<strong>imaging esteso</strong> per neoplasia occulta è esplicitamente sconsigliato "+IIINB+" "+loe("A")+" — TC total-body e PET-TC aumentano le diagnosi precoci ma la differenza si perde a 1 anno, senza beneficio di mortalità né stadi più curabili. L'eco addome ha senso <em>solo</em> come accertamento mirato: quando anamnesi, esame obiettivo o laboratorio puntano su un organo — epatopatia, massa palpabile, alterazione degli indici epatici o renali — oppure quando sospetti un sanguinamento retroperitoneale dopo accesso femorale. In entrambi i casi è un esame guidato da un'ipotesi, non uno screening.";
-    if(s.neo) onco += "<br><br><span class='prov prov-integr'>in questo paziente</span> Neoplasia attiva già nota: lo screening non serve, serve il <strong>confronto con l'oncologo</strong> su fase estesa e scelta del farmaco — DOAC o EBPM preferiti al VKA "+I+" "+loe("A")+", e API-CAT supporta anche apixaban 2,5 mg ×2/die dopo i primi 6 mesi."+who("oncologia");
+    var onco = "Se <strong>non emerge alcun fattore di rischio</strong>: anamnesi accurata, esame obiettivo e <strong>screening oncologico età-appropriato</strong> secondo le linee guida nazionali sono raccomandati "+A1+" "+loe("A")+". L'incidenza di neoplasia in questi pazienti è del <strong>4–10% nel primo anno</strong> e quasi metà delle diagnosi arriva proprio da anamnesi ed esame obiettivo accurati.";
+    onco += "<br><br><span class='prov prov-integr'>sull'eco addome</span> Non è parte dello screening raccomandato e non va chiesta di routine: l'<strong>imaging esteso</strong> per neoplasia occulta è esplicitamente sconsigliato "+A3NB+" "+loe("A")+" — TC total-body e PET-TC aumentano le diagnosi precoci ma la differenza si perde a 1 anno, senza beneficio di mortalità né stadi più curabili. L'eco addome ha senso <em>solo</em> come accertamento mirato: quando anamnesi, esame obiettivo o laboratorio puntano su un organo — epatopatia, massa palpabile, alterazione degli indici epatici o renali — oppure quando sospetti un sanguinamento retroperitoneale dopo accesso femorale. In entrambi i casi è un esame guidato da un'ipotesi, non uno screening.";
+    if(s.neo) onco += "<br><br><span class='prov prov-integr'>in questo paziente</span> Neoplasia attiva già nota: lo screening non serve, serve il <strong>confronto con l'oncologo</strong> su fase estesa e scelta del farmaco — DOAC o EBPM preferiti al VKA "+A1+" "+loe("A")+", e API-CAT supporta anche apixaban 2,5 mg ×2/die dopo i primi 6 mesi."+who("oncologia");
     h+=step("","6","Screening oncologico — e perché l'eco addome non è di routine"+who("medico curante · oncologia se emerge un sospetto"), onco, null);
 
     /* ─── A DISTANZA ─── */
     h+='<div class="tlbl">A distanza &middot; <b>mai in fase acuta</b></div>';
 
-    var tromb = "Test per trombofilia genetica o acquisita: <strong>potrebbe</strong> essere ragionevole "+IIB+" "+loe("C-LD")+" solo se ricorrono <em>tutte</em> queste condizioni — nessun fattore di rischio maggiore reversibile, <strong>familiarità trombotica o età &lt;55 anni</strong>, e risultato atteso <strong>modificare la gestione</strong> o informare la discussione sul rischio familiare."+
+    var tromb = "Test per trombofilia genetica o acquisita: <strong>potrebbe</strong> essere ragionevole "+A2B+" "+loe("C-LD")+" solo se ricorrono <em>tutte</em> queste condizioni — nessun fattore di rischio maggiore reversibile, <strong>familiarità trombotica o età &lt;55 anni</strong>, e risultato atteso <strong>modificare la gestione</strong> o informare la discussione sul rischio familiare."+
       (s.eta!==null? (s.eta<55? "<br><span class='prov prov-integr'>in questo paziente</span> Ha "+nf(s.eta,0)+" anni: il criterio anagrafico c'è.":"<br><span class='prov prov-integr'>in questo paziente</span> Ha "+nf(s.eta,0)+" anni: senza familiarità trombotica il criterio non c'è.") : "")+
       "<br><br><strong>Mai in fase acuta</strong>: i test coagulativi sono alterati dal consumo di fattori durante l'evento e dall'anticoagulante in corso. E attenzione al peso del risultato: la sola eterozigosi per fattore V Leiden o protrombina <strong>non</strong> modifica in modo consistente il rischio di recidiva né la durata della terapia — a differenza dei deficit di antitrombina, proteina C o proteina S.";
     h+=step("warn","7","Trombofilia: quasi mai, e comunque non adesso"+who("laboratorio di coagulazione · ematologia"), tromb, null);
 
-    var lacTxt = "Questo pannello si chiede per un motivo preciso: <strong>cambia il farmaco</strong>. Nella <strong>APS trombotica conclamata</strong> il VKA è raccomandato <em>sul</em> DOAC per prevenire trombosi venose e arteriose "+I+" "+loe("A")+"; con un <strong>singolo anticorpo</strong> (anticardiolipina o β2-glicoproteina) un DOAC è alternativa ragionevole "+IIB+" "+loe("B-R")+", che non è la stessa cosa.";
+    var lacTxt = "Questo pannello si chiede per un motivo preciso: <strong>cambia il farmaco</strong>. Nella <strong>APS trombotica conclamata</strong> il VKA è raccomandato <em>sul</em> DOAC per prevenire trombosi venose e arteriose "+A1+" "+loe("A")+"; con un <strong>singolo anticorpo</strong> (anticardiolipina o β2-glicoproteina) un DOAC è alternativa ragionevole "+A2B+" "+loe("B-R")+", che non è la stessa cosa.";
     lacTxt += "<br><br><span class='prov prov-integr'>integrazione</span> La linea guida distillata non definisce il percorso diagnostico: il LAC è <strong>inaffidabile</strong> in corso di anticoagulante (eparina, DOAC, VKA lo falsano) e la diagnosi richiede la conferma a distanza sullo stesso paziente. Concorda tempi e sospensioni con il laboratorio invece di prelevare in acuto e ritrovarti un risultato non interpretabile.";
-    if(s.aps) lacTxt += "<br><br><span class='prov prov-integr'>in questo paziente</span> Hai già segnalato una APS trombotica conclamata: il piano è coerente (VKA), ma verifica che la positività sia confermata e documentata — è la differenza fra "+I+" "+loe("A")+" e "+IIB+".";
+    if(s.aps) lacTxt += "<br><br><span class='prov prov-integr'>in questo paziente</span> Hai già segnalato una APS trombotica conclamata: il piano è coerente (VKA), ma verifica che la positività sia confermata e documentata — è la differenza fra "+A1+" "+loe("A")+" e "+A2B+".";
     else if(s.aps1) lacTxt += "<br><br><span class='prov prov-integr'>in questo paziente</span> Singolo anticorpo segnalato: se il profilo evolvesse verso la forma conclamata, il farmaco cambia da DOAC a VKA.";
     h+=step("","8","LAC e anticorpi antifosfolipidi"+who("laboratorio di coagulazione · reumatologia o ematologia"), lacTxt, null);
 
     h+=step("","9","Sintomi persistenti a ≥3 mesi: la valutazione per CTEPD"+who("cardiologia · medicina nucleare · centro CTEPH"),
-      "Se dispnea o limitazione funzionale persistono dopo ≥3 mesi di anticoagulazione terapeutica, la valutazione per CTEPD è <strong>raccomandata</strong> "+I+" "+loe("B-NR")+" e va fatta con <strong>ecocardiogramma + scintigrafia perfusionale</strong> (planare, SPECT o SPECT/CT), non con l'eco da solo "+IIA+" "+loe("B-NR")+". Il <strong>CPET</strong> è ragionevole per escluderla "+IIA+" "+loe("B-NR")+"; un <strong>test da sforzo semplice</strong> (6 minuti di cammino o shuttle walk test) a 3–6 mesi può essere ragionevole per quantificare la limitazione "+IIB+" "+loe("B-NR")+". Durante tutta la valutazione l'anticoagulazione <strong>prosegue</strong> "+I+" "+loe("B-NR")+".",
-      "Se la diagnosi è <b>CTEPD con ipertensione polmonare</b>: invio a centro esperto raccomandato "+I+" "+loe("C-LD")+"; nelle forme <b>senza</b> PH selezionate l'invio può essere benefico "+IIA+" "+loe("C-LD")+". CTEPH dopo EP acuta ≈3%; fino a metà dei pazienti ha difetti perfusori residui, per lo più asintomatici e senza correlazione consistente con gli esiti."+
+      "Se dispnea o limitazione funzionale persistono dopo ≥3 mesi di anticoagulazione terapeutica, la valutazione per CTEPD è <strong>raccomandata</strong> "+A1+" "+loe("B-NR")+" e va fatta con <strong>ecocardiogramma + scintigrafia perfusionale</strong> (planare, SPECT o SPECT/CT), non con l'eco da solo "+A2A+" "+loe("B-NR")+". Il <strong>CPET</strong> è ragionevole per escluderla "+A2A+" "+loe("B-NR")+"; un <strong>test da sforzo semplice</strong> (6 minuti di cammino o shuttle walk test) a 3–6 mesi può essere ragionevole per quantificare la limitazione "+A2B+" "+loe("B-NR")+". Durante tutta la valutazione l'anticoagulazione <strong>prosegue</strong> "+A1+" "+loe("B-NR")+".",
+      "Se la diagnosi è <b>CTEPD con ipertensione polmonare</b>: invio a centro esperto raccomandato "+A1+" "+loe("C-LD")+"; nelle forme <b>senza</b> PH selezionate l'invio può essere benefico "+A2A+" "+loe("C-LD")+". CTEPH dopo EP acuta ≈3%; fino a metà dei pazienti ha difetti perfusori residui, per lo più asintomatici e senza correlazione consistente con gli esiti."+
       (s.vd?"<br><span class='prov prov-integr'>in questo paziente</span> L'eco in acuto è alterato ("+s.vdList.join(", ")+"): il controllo a 3–6 mesi ha senso. Se fosse stato normale, ripeterlo avrebbe basso rendimento e potrebbe essere omesso.":"<br>Se l'eco in acuto era <b>normale</b>, ripeterlo a 3–6 mesi ha basso rendimento diagnostico e può essere omesso."));
 
     var invii=[];
-    invii.push("<strong>Clinica EP specializzata o multidisciplinare</strong> "+IIA+" "+loe("B-NR")+" per: anticoagulazione complessa (INR labile, funzione renale fluttuante, fallimento della terapia, allergie, alto rischio emorragico), TEV recidivante, sintomi non risolti, EP in gravidanza, presentazione clinica complicata, richiesta di second opinion (Tabella 8).");
-    if(fertile) invii.push("<strong>Counseling su contraccezione e gravidanza</strong>: raccomandato in età fertile "+I+" "+loe("C-EO")+". In caso di gravidanza dopo EP, la gestione da parte di un team esperto in complicanze trombotiche può essere utile "+IIA+" "+loe("C-EO")+"."+who("ginecologia · medicina della gravidanza")+
-      "<br><strong>Sanguinamento uterino anomalo</strong> in corso di anticoagulazione (attuale o a rischio): è ragionevole discutere gestione medica — terapie ormonali —, strategie anticoagulanti alternative e interventi ginecologici, <strong>piuttosto che sospendere l'anticoagulante</strong> "+IIA+" "+loe("C-LD")+"; inquadramento eziologico con PALM-COEIN. La terapia estrogenica in corso di anticoagulazione terapeutica non ha aumentato la recidiva nelle analisi post hoc di EINSTEIN e MEGA."+who("ginecologia"));
-    if(s.acAss||s.acRel) invii.push("<strong>Follow-up strutturato del filtro cavale</strong>: ragionevole per aumentare i tassi di rimozione e individuare le complicanze "+IIA+" "+loe("C-LD")+"; il tentativo di rimozione va fatto appena il rischio di EP è sceso e l'anticoagulante è tollerato "+I+" "+loe("C-LD")+". Finestra FDA 29–54 giorni: oltre i 50 giorni i recuperi si complicano, oltre i 90 falliscono più spesso."+who("radiologia interventistica"));
-    invii.push("<strong>Questionari per ansia e depressione</strong> alle visite di follow-up: ragionevoli "+IIA+" "+loe("B-NR")+" — dopo un'EP la quota di pazienti con limitazione percepita è alta e non sempre ha un correlato vascolare (in una serie, il 23% dei sintomatici aveva eco e scintigrafia normali).");
+    invii.push("<strong>Clinica EP specializzata o multidisciplinare</strong> "+A2A+" "+loe("B-NR")+" per: anticoagulazione complessa (INR labile, funzione renale fluttuante, fallimento della terapia, allergie, alto rischio emorragico), TEV recidivante, sintomi non risolti, EP in gravidanza, presentazione clinica complicata, richiesta di second opinion (Tabella 8).");
+    if(fertile) invii.push("<strong>Counseling su contraccezione e gravidanza</strong>: raccomandato in età fertile "+A1+" "+loe("C-EO")+". In caso di gravidanza dopo EP, la gestione da parte di un team esperto in complicanze trombotiche può essere utile "+A2A+" "+loe("C-EO")+"."+who("ginecologia · medicina della gravidanza")+
+      "<br><strong>Sanguinamento uterino anomalo</strong> in corso di anticoagulazione (attuale o a rischio): è ragionevole discutere gestione medica — terapie ormonali —, strategie anticoagulanti alternative e interventi ginecologici, <strong>piuttosto che sospendere l'anticoagulante</strong> "+A2A+" "+loe("C-LD")+"; inquadramento eziologico con PALM-COEIN. La terapia estrogenica in corso di anticoagulazione terapeutica non ha aumentato la recidiva nelle analisi post hoc di EINSTEIN e MEGA."+who("ginecologia"));
+    if(s.acAss||s.acRel) invii.push("<strong>Follow-up strutturato del filtro cavale</strong>: ragionevole per aumentare i tassi di rimozione e individuare le complicanze "+A2A+" "+loe("C-LD")+"; il tentativo di rimozione va fatto appena il rischio di EP è sceso e l'anticoagulante è tollerato "+A1+" "+loe("C-LD")+". Finestra FDA 29–54 giorni: oltre i 50 giorni i recuperi si complicano, oltre i 90 falliscono più spesso."+who("radiologia interventistica"));
+    invii.push("<strong>Questionari per ansia e depressione</strong> alle visite di follow-up: ragionevoli "+A2A+" "+loe("B-NR")+" — dopo un'EP la quota di pazienti con limitazione percepita è alta e non sempre ha un correlato vascolare (in una serie, il 23% dei sintomatici aveva eco e scintigrafia normali).");
     h+=step("","10","A chi mandarlo, e per che cosa"+who("ambulatorio EP · PERT"), invii.join("<br><br>"), null);
 
     if(L==="C"||L==="D"||L==="E"){
       h+=step("","11","Anti-Xa: solo in scenari precisi"+who("laboratorio"),
-        "Nella maggior parte dei pazienti con EBPM a dose peso-adattata il monitoraggio di routine <strong>non è indicato</strong> "+IIINB+" "+loe("A")+". È ragionevole in <strong>IRC severa</strong> (ClCr &lt;30) per guidare l'aggiustamento "+IIA+" "+loe("C-LD")+"; beneficio <strong>non stabilito</strong> in gravidanza (una volta per trimestre), con peso &gt;150 kg o BMI &gt;40, e in terapia intensiva "+IIB+" "+loe("C-LD")+" — non controindicato, semplicemente non dimostrato."+
+        "Nella maggior parte dei pazienti con EBPM a dose peso-adattata il monitoraggio di routine <strong>non è indicato</strong> "+A3NB+" "+loe("A")+". È ragionevole in <strong>IRC severa</strong> (ClCr &lt;30) per guidare l'aggiustamento "+A2A+" "+loe("C-LD")+"; beneficio <strong>non stabilito</strong> in gravidanza (una volta per trimestre), con peso &gt;150 kg o BMI &gt;40, e in terapia intensiva "+A2B+" "+loe("C-LD")+" — non controindicato, semplicemente non dimostrato."+
         ((s.clcr!==null&&s.clcr<30)?"<br><span class='prov prov-integr'>in questo paziente</span> ClCr stimata "+nf(s.clcr,0)+" mL/min: qui il monitoraggio è ragionevole.":""),
-        "Quando lo chiedi: <b>picco a 3–5 ore</b> dalla dose, a steady state (≥3 dosi), calibrato sulla specifica EBPM — non un valore di valle o random "+I+" "+loe("C-LD")+".");
+        "Quando lo chiedi: <b>picco a 3–5 ore</b> dalla dose, a steady state (≥3 dosi), calibrato sulla specifica EBPM — non un valore di valle o random "+A1+" "+loe("C-LD")+".");
     }
     return h;
   }
@@ -1756,7 +1774,7 @@ html.js.motore-ko #nomotore{display:block}
       "Prima di somministrare: <b>emocromo</b> con emoglobina e piastrine, <b>clearance della creatinina</b>, valutazione del rischio emorragico e assenza di controindicazioni.<br>Monitoraggio anti-Xa: da riservare a situazioni specifiche — VTE ricorrente, insufficienza renale, pesi estremi. Non di routine.");
     h+=step("","2","Diagnosi senza irradiare più del necessario",
       "Regole di predizione clinica e D-dimero vanno considerati per escludere l'EP "+IIA+" "+loe("B")+" — tenendo presente che il D-dimero sale fisiologicamente e nel terzo trimestre è sopra soglia in quasi una donna su quattro. La <strong>CUS</strong> va considerata, soprattutto se ci sono sintomi di TVP, proprio per evitare irradiazione inutile "+IIA+" "+loe("B")+": una TVP prossimale chiude la questione. Poi radiografia del torace e, secondo il risultato, <strong>scintigrafia perfusoria o CTPA a basso dosaggio</strong> "+IIA+" "+loe("C")+"; se la radiografia è alterata, la CTPA è la prima scelta.",
-      "Dose fetale: CTPA <b>0,05–0,5 mGy</b>, scintigrafia perfusoria <b>0,02–0,5 mGy</b> — entrambe ben sotto la soglia di 50–100 mSv associata a complicanze fetali. Le tecniche moderne portano la dose alla mammella materna a <b>3–4 mGy</b>: evitare la CTPA per il timore di neoplasia materna <strong>non è giustificato</strong> (rischio di neoplasia nell'arco della vita aumentato di un fattore 1,0003–1,0007).<br>Sovradiagnosticare un'EP in gravidanza non è innocuo: comporta rischio emorragico al parto, esclusione della contraccezione estrogenica e tromboprofilassi nelle gravidanze successive.");
+      "Dose fetale: CTPA <b>0,05–0,5 mGy</b>, scintigrafia perfusoria <b>0,02–0,20 mGy</b> a bassa dose (0,20–0,60 ad alta dose) — entrambe ben sotto la soglia di 50–100 mSv associata a complicanze fetali. Le tecniche moderne portano la dose alla mammella materna a <b>3–4 mGy</b>: evitare la CTPA per il timore di neoplasia materna <strong>non è giustificato</strong> (rischio di neoplasia nell'arco della vita aumentato di un fattore 1,0003–1,0007).<br>Sovradiagnosticare un'EP in gravidanza non è innocuo: comporta rischio emorragico al parto, esclusione della contraccezione estrogenica e tromboprofilassi nelle gravidanze successive.");
     h+=step("stop","3","Parto e anestesia: le regole non negoziabili",
       "<strong>Niente ago spinale o peridurale se non sono passate almeno 24 ore</strong> dall'ultima dose terapeutica di EBPM "+III3+" "+loe("C")+". <strong>Niente EBPM entro 4 ore</strong> dalla rimozione del catetere peridurale "+III3+" "+loe("C")+". Nelle donne in EBPM terapeutica va considerato seriamente un <strong>parto programmato</strong>, per non farsi trovare in travaglio spontaneo con la paziente pienamente anticoagulata.",
       "Nelle situazioni ad alto rischio, per esempio EP recente: convertire l'EBPM in <b>UFH almeno 36 ore prima</b> del parto, sospendere l'infusione <b>4–6 ore prima</b> e verificare che l'aPTT sia normale prima dell'anestesia loco-regionale.<br>Dopo il parto: l'anticoagulazione va proseguita per <b>almeno 6 settimane</b>, con una durata complessiva minima di <b>3 mesi</b>. EBPM e warfarin sono compatibili con l'allattamento, i NOAC no.");
@@ -1867,7 +1885,9 @@ html.js.motore-ko #nomotore{display:block}
   };
   var RCPP = '<span class="prov prov-rcp">scheda tecnica</span>',
       FNT  = '<span class="prov prov-fonte">fonte</span>',
+      S6   = '<span class="prov prov-fonte">Suppl. Tab. 6</span>',
       S8   = '<span class="prov prov-fonte">Suppl. Tab. 8</span>',
+      VRF  = '<span class="verif">DA VERIFICARE</span>',
       INTG = '<span class="prov prov-integr">integrazione</span>';
   function reneOne(id, c, d, p){
     switch(id){
@@ -1879,42 +1899,43 @@ html.js.motore-ko #nomotore{display:block}
         if(c<30) return {m:"Enoxaparina", lvl:"warn", t:"<b>"+nf(1*p,0)+" mg sc 1×/die</b> — 1 mg/kg in monosomministrazione, non 1 mg/kg ×2 né 1,5 mg/kg "+RCPP};
         return null;
       case "fonda":
-        if(d||c<30) return {m:"Fondaparinux", lvl:"stop", t:"<b>controindicato</b> a dose terapeutica "+RCPP};
-        if(c<50) return {m:"Fondaparinux", lvl:"warn", t:"cautela; l’entità della riduzione è <span class='verif'>DA VERIFICARE</span> sulla scheda tecnica "+RCPP};
+        if(d||c<30) return {m:"Fondaparinux", lvl:"stop", t:"<b>controindicato</b> sotto 30 "+RCPP};
+        if(c<50) return {m:"Fondaparinux", lvl:"warn", t:"<b>nessuna riduzione</b> di dose, ma cautela, e durata non oltre gli studi (media 7 giorni)"+(p>100?"; oltre 100 kg, dopo 10 mg iniziali si può considerare <b>7,5 mg</b>/die":"")+" "+RCPP};
         return null;
       case "tinza":
-        if(d||c<20) return {m:"Tinzaparina", lvl:"warn", t:"sotto 20 mL/min guida con l’<b>anti-Xa</b> "+RCPP};
+        if(d||c<30) return {m:"Tinzaparina", lvl:"warn", t:"<b>non raccomandata</b> sotto 30: la dose non è stabilita. Se serve, con monitoraggio dell’<b>anti-Xa</b> (nessun accumulo documentato fino a 20) "+RCPP};
         return null;
       case "dalte":
-        if(d||c<30) return {m:"Dalteparina", lvl:"warn", t:"nessuno schema ridotto standardizzato: guida con l’<b>anti-Xa</b> "+RCPP};
+        if(d||c<30) return {m:"Dalteparina", lvl:"warn", t:"dose guidata dall’<b>anti-Xa</b>, senza una riduzione fissa (scheda tecnica britannica: in Italia non risulta autorizzata) "+RCPP};
         return null;
       case "nadro":
-        if(d||c<30) return {m:"Nadroparina", lvl:"stop", t:"<b>non usare</b> a dose curativa "+RCPP};
-        if(c<50) return {m:"Nadroparina", lvl:"warn", t:"riduzione della dose; l’entità è <span class='verif'>DA VERIFICARE</span> "+RCPP};
+        if(d||c<30) return {m:"Nadroparina", lvl:"stop", t:"<b>controindicata</b> a dose di trattamento "+RCPP};
+        if(c<50) return {m:"Nadroparina", lvl:"warn", t:"riduzione dal <b>25 al 33%</b>, se la giudichi appropriata sul rischio emorragico e trombotico "+RCPP};
         return null;
       case "apix":
-        if(d) return {m:"Apixaban", lvl:"warn", t:"in dialisi è <b>incerto</b> se riduca il sanguinamento rispetto al VKA <span class='cor cor-2b'>IIb</span> "+FNT};
-        if(c<15) return {m:"Apixaban", lvl:"stop", t:"<b>non raccomandato</b> "+S8};
-        if(c<30) return {m:"Apixaban", lvl:"warn", t:"da usare con <b>cautela</b> "+S8};
+        if(d) return {m:"Apixaban", lvl:"warn", t:"in dialisi è <b>incerto</b> se riduca il sanguinamento rispetto al VKA "+A2B+" "+loe("B-NR")+" "+FNT};
+        if(c<15) return {m:"Apixaban", lvl:"stop", t:"<b>non raccomandato</b> sotto 15 "+S6};
+        if(c<30) return {m:"Apixaban", lvl:"warn", t:"non controindicato sopra 15 "+S6+", ma AMPLIFY escludeva ClCr &lt;25 "+S8+", e nella IRC stadio 4–5 il vantaggio sul VKA è <b>incerto</b> "+A2B+" "+loe("B-NR")};
         return null;
       case "riva":
-        if(d||c<15) return {m:"Rivaroxaban", lvl:"stop", t:"<b>non raccomandato</b> "+S8};
-        if(c<30) return {m:"Rivaroxaban", lvl:"warn", t:"<b>cautela</b> — per FDA già non raccomandato sotto 30 "+S8};
+        if(d||c<15) return {m:"Rivaroxaban", lvl:"stop", t:"<b>non raccomandato</b> sotto 15 "+S6};
+        if(c<30) return {m:"Rivaroxaban", lvl:"warn", t:"per EMA ammesso sopra 15, per FDA <b>non raccomandato</b> sotto 30 "+S6+"; EINSTEIN escludeva ClCr &lt;30 "+S8};
         return null;
       case "edox":
-        if(d||c<15) return {m:"Edoxaban", lvl:"stop", t:"<b>non raccomandato</b> "+S8};
-        if(c<=50) return {m:"Edoxaban", lvl:"warn", t:"<b>30 mg 1×/die</b> anziché 60, dopo ≥5 giorni di parenterale "+S8};
+        if(d||c<15) return {m:"Edoxaban", lvl:"stop", t:"<b>non raccomandato</b> sotto 15 "+S6};
+        if(c<30) return {m:"Edoxaban", lvl:"warn", t:"dose "+VRF+": la riduzione a 30 mg vale per ClCr 30–50, e Hokusai-VTE escludeva ClCr &lt;30 "+S8};
+        if(c<=50) return {m:"Edoxaban", lvl:"warn", t:"<b>30 mg 1×/die</b> anziché 60 (ClCr 30–50, o peso &lt;60 kg), dopo ≥5 giorni di parenterale "+S8};
         return null;
       case "dabi":
-        if(d||c<30) return {m:"Dabigatran", lvl:"stop", t:"<b>non raccomandato</b> "+S8};
-        if(c<50) return {m:"Dabigatran", lvl:"warn", t:"<b>escluso</b> se il paziente assume un inibitore forte della P-gp "+S8};
+        if(d||c<30) return {m:"Dabigatran", lvl:"stop", t:"<b>non raccomandato</b> sotto 30 "+S6};
+        if(c<50) return {m:"Dabigatran", lvl:"warn", t:"<b>escluso</b> se il paziente assume un inibitore della P-gp "+S6};
         return null;
       case "vka":
         if(!d && c>=30) return null;
         return {m:"VKA (warfarin)", lvl:"ok", t:"nessun aggiustamento di dose — si titola sull’<b>INR</b>: è l’orale che regge la clearance più bassa. Controlli più ravvicinati "+INTG};
       case "antixa":
         if(!d && c>=30) return null;
-        return {m:"Anti-Xa", lvl:"ok", t:"se usi EBPM, il picco a <b>3–5 h</b> a steady state (≥3 dosi) è ragionevole per guidare la dose <span class='cor cor-2a'>IIa</span> "+FNT};
+        return {m:"Anti-Xa", lvl:"ok", t:"se usi EBPM, il monitoraggio dell’anti-Xa è ragionevole "+A2A+" "+loe("C-LD")+" — al picco, <b>3–5 h</b> dopo la dose a steady state (≥3 dosi) "+A1+" "+loe("C-LD")+" "+FNT};
       case "fluidi":
         if(!d && c>=30) return null;
         return {m:"Cristalloidi", lvl:"warn", t:"la dose non cambia, ma con oliguria o anuria <b>non ripetere il bolo al buio</b> "+INTG};
@@ -2022,7 +2043,7 @@ html.js.motore-ko #nomotore{display:block}
     el("destD").innerHTML=dest.d;
     el("footCat").textContent=catFull||"—";
     el("kicker").textContent = "Scheda d'azione · Embolia polmonare acuta · " + (esc?"ESC 2019":"AHA/ACC 2026");
-    el("footNota").innerHTML = esc ? 'PEITHO: decompensazione a <b>1,8 ± 1,6 giorni</b>' : 'Finestra critica <b>24–72 h</b>';
+    el("footNota").innerHTML = esc ? 'PEITHO: decompensazione a <b>1,79 ± 1,60 giorni</b>' : 'Finestra critica <b>24–72 h</b>';
     var fl=el("footCatL"); if(fl) fl.textContent = esc?"Rischio":"Categoria";
     el("footDest").textContent = dest.k==="none"?"—":(dest.k==="casa"?"domicilio":(dest.k==="reparto"?"reparto":(dest.k==="sub"?"sub-intensiva":"UTIC")));
 
@@ -2033,9 +2054,9 @@ html.js.motore-ko #nomotore{display:block}
       if(r.note[i]==="VDFLAG"){
         a.push('<div class="al al-amber"><b>Score basso, ma marcatore positivo.</b> '+
           (s.bio?"Biomarcatore cardiaco elevato":"")+(s.bio&&s.vd?" e ":"")+(s.vd?"disfunzione del VD ("+s.vdList.join(", ")+")":"")+
-          '. Anche nei pazienti a basso rischio per score clinico, la disfunzione del VD identifica un sottogruppo a rischio aumentato (OR 4,19–22,9 a seconda dell\'endpoint; Barco 2019, Becattini 2021, RIETE). La LG consente comunque la gestione ambulatoriale in categoria A–B '+IIA+' '+loe("B-R")+': valutalo in decisione condivisa, e se hai dubbi tieni il paziente in osservazione.</div>');
+          '. Anche nei pazienti a basso rischio per score clinico, la disfunzione del VD identifica un sottogruppo a rischio aumentato (OR 4,81 per la morte a breve termine e 22,9 per la morte da EP nella metanalisi citata da AHA/ACC; OR 4,19 in quella di ESC 2019). La LG consente comunque la gestione ambulatoriale in categoria A–B '+A2A+' '+loe("B-R")+': valutalo in decisione condivisa, e se hai dubbi tieni il paziente in osservazione.</div>');
       } else if(r.note[i]==="LATFLAG"){
-        a.push('<div class="al al-amber"><b>D2 guidata dal solo lattato.</b> L\'unico marcatore di ipoperfusione presente è il lattato ('+nf(s.lat)+' mmol/L). La fonte, nel definire la categoria D2, parla di <strong>lattato persistente</strong>: ricontrollalo prima di consolidare la categoria, e nel frattempo tratta il paziente come D2. Il lattato resta comunque raccomandato in C–E '+I+' '+loe("B-NR")+' proprio perché nel normoteso svela l\'ipoperfusione subclinica.</div>');
+        a.push('<div class="al al-amber"><b>D2 guidata dal solo lattato.</b> L\'unico marcatore di ipoperfusione presente è il lattato ('+nf(s.lat)+' mmol/L). La fonte, nel definire la categoria D2, parla di <strong>lattato persistente</strong>: ricontrollalo prima di consolidare la categoria, e nel frattempo tratta il paziente come D2. Il lattato resta comunque raccomandato in C–E '+A1+' '+loe("B-NR")+' proprio perché nel normoteso svela l\'ipoperfusione subclinica.</div>');
       } else if(r.note[i]==="ESCNOTAE"){
         a.push('<div class="al al-amber"><b>Nota e della Tabella 8.</b> PESI classe I–II e sPESI 0, ma '+
           (s.vdEsc?"disfunzione del VD ("+s.vdListEsc.join(", ")+")":"")+(s.vdEsc&&s.trop?" e ":"")+(s.trop?"troponina positiva":"")+
@@ -2044,15 +2065,15 @@ html.js.motore-ko #nomotore{display:block}
     }
     if(!esc && r.R) a.push('<div class="al al-blue"><b>Modificatore R attivo.</b> Compromissione respiratoria secondo la soglia della categoria '+r.cat.charAt(0)+
       (r.cat.charAt(0)==="C"?" (SpO₂ &lt;90%, FR ≥30/min o necessità di O₂ supplementare)":(r.cat.charAt(0)==="D"?" (&gt;6 L/min di cannula nasale o maschera non-rebreather)":" (necessità di ventilazione non invasiva o invasiva)"))+
-      '. Il modificatore dipende dal <strong>fabbisogno</strong> di ossigeno o ventilazione, non dal solo valore di SpO₂.</div>');
-    if(s.clot && !esc) a.push('<div class="al al-red"><b>Clot-in-transit.</b> Nelle categorie C3–E2 con trombo atriale o ventricolare destro libero flottante, le terapie avanzate rispetto alla sola anticoagulazione sono ragionevoli '+IIA+' '+loe("C-LD")+' per ridurre il rischio di deterioramento. Attiva il PERT.</div>');
-    if(s.acAss && !esc) a.push('<div class="al al-red"><b>Controindicazione assoluta all\'anticoagulazione.</b> Percorso deviato: filtro cavale retrievable '+I+' '+loe("B-R")+' se il filtro è ritenuto necessario, rimozione appena l\'anticoagulante è tollerato '+I+' '+loe("C-LD")+'. Nel paziente <em>efficacemente anticoagulato</em> il filtro di routine è '+IIIH+' '+loe("A")+'.</div>');
+      (r.cat.charAt(0)==="C"?'. In C basta uno dei tre, anche la sola SpO₂ &lt;90%.</div>':'. In '+r.cat.charAt(0)+' conta il <strong>fabbisogno</strong> di ossigeno o di ventilazione, non il solo valore di SpO₂.</div>'));
+    if(s.clot && !esc) a.push('<div class="al al-red"><b>Clot-in-transit.</b> Nelle categorie C3–E2 con trombo atriale o ventricolare destro libero flottante, le terapie avanzate rispetto alla sola anticoagulazione sono ragionevoli '+A2A+' '+loe("C-LD")+' per ridurre il rischio di deterioramento. Attiva il PERT.</div>');
+    if(s.acAss && !esc) a.push('<div class="al al-red"><b>Controindicazione assoluta all\'anticoagulazione.</b> Percorso deviato: filtro cavale retrievable '+A1+' '+loe("B-R")+' se il filtro è ritenuto necessario, rimozione appena l\'anticoagulante è tollerato '+A1+' '+loe("C-LD")+'. Nel paziente <em>efficacemente anticoagulato</em> il filtro di routine è '+A3H+' '+loe("A")+'.</div>');
     if(!esc && s.hestiaN>=1 && r.cat && "AB".indexOf(r.cat.charAt(0))>=0)
       a.push('<div class="al al-blue"><b>Hestia positivo:</b> '+s.hestiaList.join(" · ")+'. Un solo criterio positivo, anche socio-logistico, esclude il domicilio.</div>');
     if(s.ctAss>0 && r.cat && (esc ? (r.cat==="ALTO"||r.cat==="IH") : "DE".indexOf(r.cat.charAt(0))>=0))
-      a.push('<div class="al al-red"><b>Trombolisi controindicata</b> ('+s.ctAss+' criterio/i assoluto/i). Orientati sulle opzioni meccaniche'+(disponibile("mt")?"":(esc?" — che in uno spoke non hai in sede: la telefonata al centro di riferimento è parte della decisione, e una terapia salvavita disponibile in loco non va ritardata per organizzare un trasferimento":" — che in uno spoke non hai in sede: attiva il PERT dell'hub, senza trasferire un paziente instabile prima di averlo stabilizzato "+IIIH+" "+loe("C-EO")))+'.</div>');
+      a.push('<div class="al al-red"><b>Trombolisi controindicata</b> ('+s.ctAss+' criterio/i assoluto/i). Orientati sulle opzioni meccaniche'+(disponibile("mt")?"":(esc?" — che in uno spoke non hai in sede: la telefonata al centro di riferimento è parte della decisione, e una terapia salvavita disponibile in loco non va ritardata per organizzare un trasferimento":" — che in uno spoke non hai in sede: attiva il PERT dell'hub, senza trasferire un paziente instabile prima di averlo stabilizzato "+A3H+" "+loe("C-EO")))+'.</div>');
     if(!esc && r.cat && "CDE".indexOf(r.cat.charAt(0))>=0)
-      a.push('<div class="al al-blue"><b>PERT.</b> Nelle categorie C–E il team multidisciplinare è raccomandato '+I+'. La soglia non è rigida: anche una categoria A–B con comorbilità multiple può beneficiarne.</div>');
+      a.push('<div class="al al-blue"><b>PERT.</b> Nelle categorie C–E il team multidisciplinare è raccomandato '+A1+' '+loe("B-NR")+'. La soglia non è rigida: anche una categoria A–B con comorbilità multiple può beneficiarne.</div>');
     if(esc && s.acAss) a.push('<div class="al al-red"><b>Controindicazione assoluta all\'anticoagulazione.</b> Il filtro cavale <em>va considerato</em> '+IIA+' '+loe("C")+'. Non ritardare l\'inizio dell\'anticoagulazione appena diventa sicura — vale a maggior ragione nel paziente oncologico. L\'uso di routine del filtro è <strong>non raccomandato</strong> '+III3+' '+loe("A")+'.</div>');
     if(esc && s.clot) a.push('<div class="al al-red"><b>Trombo mobile nelle sezioni destre.</b> Si trova in meno del 4% dei pazienti non selezionati con EP, ma fino al 18% in terapia intensiva. La sua presenza <strong>conferma di fatto la diagnosi</strong> e si associa ad alta mortalità precoce, soprattutto se coesiste disfunzione del VD. Nel paziente instabile rafforza la decisione di riperfondere subito.</div>');
     if(esc && (r.cat==="ALTO"||r.cat==="IH")) a.push('<div class="al al-blue"><b>Team multidisciplinare.</b> La costituzione di un team e di un programma per la gestione dell\'EP ad alto rischio e dei casi selezionati a rischio intermedio <em>va considerata</em> '+IIA+' '+loe("C")+', secondo le risorse e le competenze di ogni ospedale.</div>');
