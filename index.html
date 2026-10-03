@@ -638,7 +638,7 @@ html.js.motore-ko #nomotore{display:block}
     <tr><td class="pr-mol">Dabigatran / Edoxaban</td><td class="pr-dose">≥5 giorni di parenterale (EBPM/UFH) prima dell'avvio · <b>dabigatran 150 mg ×2/die</b> · <b>edoxaban 60 mg ×1/die</b>, 30 mg se ClCr 30–50 o peso &lt;60 kg<br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 8</span></td><td class="pr-rene">Dabigatran <b>non raccomandato &lt;30</b> (e già &lt;50 con inibitori P-gp) <span class="prov prov-fonte">Suppl. Tab. 6</span> · edoxaban <b>30 mg</b> se ClCr 30–50 <span class="prov prov-fonte">Suppl. Tab. 8</span>, non raccomandato &lt;15 <span class="prov prov-fonte">Suppl. Tab. 6</span>; fra 15 e 29 la dose è <span class="verif">DA VERIFICARE</span></td><td>Bridging parenterale obbligatorio. AHA/ACC non riporta i mg: dosi dai trial di fase III citati dal supplementare ESC</td></tr>
     <tr><td class="pr-mol">VKA (warfarin)</td><td class="pr-dose">Parenterale + VKA in overlap fino a <b>INR ≥2</b>, poi stop parenterale</td><td class="pr-rene">Nessun aggiustamento di dose: si titola sull’<b>INR</b>. In IRC controlli più ravvicinati <span class="prov prov-integr">integrazione</span></td><td>Seconda scelta salvo APS trombotica, gravidanza/allattamento, Child-Pugh C</td></tr>
     <tr><td class="pr-mol">EBPM<span>parenterale iniziale</span></td><td class="pr-dose"><b>Enoxaparina 1,0 mg/kg</b> ogni 12 h o <b>1,5 mg/kg</b> 1×/die → <span class="dose-live" data-perkg="1" data-unit="mg"></span> / <span class="dose-live" data-perkg="1.5" data-unit="mg"></span> · <b>Fondaparinux</b> <span class="dose-live" data-fonda="1"></span><br><span class="prov prov-fonte">ESC 2019 · Suppl. Tab. 5</span></td><td class="pr-rene">ClCr 15–29: enoxaparina <b>1 mg/kg 1×/die</b> <span class="prov prov-rcp">scheda tecnica</span> · ClCr ≤30: la linea guida indica <b>UFH</b> <span class="prov prov-fonte">fonte</span></td><td>AHA/ACC non pubblica una tabella per singola EBPM: le dosi vengono dal supplementare ESC. Preferita all'UFH in C1–E1 <span class="cor cor-1">1</span> <span class="loe">B-R</span></td></tr>
-    <tr><td class="pr-mol">EBPM<span>obesità classe III</span></td><td class="pr-dose"><b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die (peso reale)</td><td class="pr-rene">Il farmaco resta sul <b>peso reale</b>; è la ClCr che va stimata sul peso aggiustato <span class="prov prov-integr">integrazione</span></td><td>Da 1 piccolo RCT: dose sperimentale, <strong>non</strong> schema formalmente raccomandato <span class="cor cor-2b">2b</span></td></tr>
+    <tr><td class="pr-mol">EBPM<span>obesità classe III</span></td><td class="pr-dose"><b>0,8 mg/kg</b> vs 1,0 mg/kg ×2/die (peso reale)</td><td class="pr-rene">Il farmaco resta sul <b>peso reale</b>, e la ClCr di Cockcroft-Gault si stima anch'essa sul peso reale (etichetta FDA di Xarelto 2025, consensus NHS England 2018); il valore sul peso aggiustato si mostra accanto, e se i due cadono ai lati di una soglia la scelta è clinica (UK Kidney Association 2025) <span class="prov prov-integr">integrazione</span></td><td>Da 1 piccolo RCT: dose sperimentale, <strong>non</strong> schema formalmente raccomandato <span class="cor cor-2b">2b</span></td></tr>
     <tr><td class="pr-mol">Anti-Xa</td><td class="pr-dose">Picco a <b>3–5 ore</b> dalla dose, a steady state (≥3 dosi)</td><td class="pr-rene"><b>È qui che serve</b>: con ClCr &lt;30 in EBPM il monitoraggio è ragionevole <span class="cor cor-2a">2a</span> <span class="prov prov-fonte">fonte</span></td><td>Non di routine <span class="cor cor-3nb">3: No Benefit</span> <span class="loe">A</span>&#8288;; riservato a ClCr&lt;30 <span class="cor cor-2a">2a</span></td></tr>
     <tr><td class="pr-mol">Noradrenalina</td><td class="pr-dose">≤<b>15 µg/min</b> = effetto minimo sulle resistenze polmonari — con 8 mg in 50 mL: <span class="dose-live" data-drug="noradrenalina" data-dose="0.05-0.5"></span> per 0,05–0,5 µg/kg/min</td><td class="pr-rene">Nessun aggiustamento, si titola sull'effetto; cautela nella disfunzione renale severa (Norepinefrina Kalceks, 4.4) <span class="prov prov-rcp">scheda tecnica</span></td><td>Oltre 15 µg/min <strong>aggiungi un secondo vasopressore</strong> invece di salire</td></tr>
     <tr><td class="pr-mol">Dobutamina</td><td class="pr-dose">fino a <b>10 µg/kg/min</b> — con 250 mg in 50 mL: <span class="dose-live" data-drug="dobutamina" data-dose="2-10"></span></td><td class="pr-rene">Nessun aggiustamento indicato; effetto della compromissione renale «non noto», da monitorare (Dobutamina Hikma, 4.4) <span class="prov prov-rcp">scheda tecnica</span></td><td>Adjunct alla NA in E1–E2; possibile agente iniziale in D2</td></tr>
@@ -905,17 +905,27 @@ html.js.motore-ko #nomotore{display:block}
     if(s.map!==null && s.map<60){ s.ipo=true; s.ipoList.push("MAP "+nf(s.map,0)+" mmHg (&lt;60)"); }
     if(ck("ipScai")){ s.ipo=true; s.ipoList.push("stadio SCAI o punteggio CPES in aumento"); }
     s.bmi = (s.alt!==null&&s.alt>0) ? s.peso/Math.pow(s.alt/100,2) : null;
-    /* Peso per Cockcroft-Gault: reale, oppure AGGIUSTATO se BMI >=30 - sul peso
-       reale l'obeso sembra avere una clearance migliore di quella vera, e resterebbe
-       a dose piena uno che andrebbe ridotto. Le dosi dei farmaci restano sul peso
-       reale: qui cambia solo la stima del rene. */
-    s.pesoCG = s.peso; s.baseCG = "reale";
-    if(s.bmi!==null && s.bmi>=30 && s.alt!==null && s.alt>0 && s.sesso){
-      var ibw = (s.sesso==="f" ? 45.5 : 50) + 0.9*(s.alt-152.4);
-      if(ibw>0 && s.peso>ibw){ s.pesoCG = ibw + 0.4*(s.peso-ibw); s.baseCG = "aggiustato"; }
-    }
+    /* Peso per Cockcroft-Gault: decide il peso REALE (decisione del medico del
+       03/10/2026). Le linee guida non lo dicono; lo dicono l'etichetta FDA di
+       Xarelto (06/2025, par. 2.1: «Calculate CrCl based on actual weight»), i trial
+       registrativi e il consensus NHS England 2018 per i DOAC. Con BMI >=30 si mostra
+       ACCANTO la clearance sul peso aggiustato (ideale di Devine + 0,4 x eccesso),
+       che la UK Kidney Association 2025 riporta come la piu' accurata nell'obeso; se
+       le due cadono ai lati di una soglia, la scelta e' clinica. */
+    s.pesoCG = s.peso; s.baseCG = "reale"; s.pesoAgg = null; s.clcrAgg = null; s.sogliaFra = null;
     s.clcr = (s.eta!==null&&s.creat!==null&&s.creat>0)
-      ? ((140-s.eta)*s.pesoCG*(s.sesso==="f"?0.85:1))/(72*s.creat) : null;
+      ? ((140-s.eta)*s.peso*(s.sesso==="f"?0.85:1))/(72*s.creat) : null;
+    if(s.clcr!==null && s.bmi!==null && s.bmi>=30 && s.alt!==null && s.alt>0 && s.sesso){
+      var ibw = (s.sesso==="f" ? 45.5 : 50) + 0.9*(s.alt-152.4);
+      if(ibw>0 && s.peso>ibw){
+        s.pesoAgg = ibw + 0.4*(s.peso-ibw);
+        s.clcrAgg = ((140-s.eta)*s.pesoAgg*(s.sesso==="f"?0.85:1))/(72*s.creat);
+        var SOGLIE_CG = [15, 30, 50, 60];   // le soglie di clearance usate da questo tool
+        for(var q=0;q<SOGLIE_CG.length;q++){
+          if((s.clcr<SOGLIE_CG[q]) !== (s.clcrAgg<SOGLIE_CG[q])){ s.sogliaFra = SOGLIE_CG[q]; break; }
+        }
+      }
+    }
 
     /* PESI */
     if(s.eta!==null){
@@ -1952,9 +1962,10 @@ html.js.motore-ko #nomotore{display:block}
       testa='<div class="rl-h">Rene <b>dialisi</b> <span class="rl-w">clearance non stimabile: manca età, sesso o creatinina</span></div>';
     else
       testa='<div class="rl-h">Rene <b>ClCr '+nf(c,0)+' mL/min</b>'+(d?' <b>· dialisi</b>':'')+
-            '<span class="rl-w">Cockcroft-Gault su peso '+s.baseCG+
-            (s.baseCG==="aggiustato"?" "+nf(s.pesoCG,0)+" kg (reale "+nf(p,0)+" kg, BMI "+nf(s.bmi)+")":" "+nf(p,0)+" kg")+
-            '</span></div>';
+            '<span class="rl-w">Cockcroft-Gault sul peso reale '+nf(p,0)+' kg'+
+            (s.clcrAgg!==null?' · sul peso aggiustato '+nf(s.pesoAgg,0)+' kg (BMI '+nf(s.bmi)+') sarebbe <b>'+nf(s.clcrAgg,0)+' mL/min</b>':'')+
+            '</span></div>'+
+            (s.sogliaFra!==null?'<div class="rl-i rl-warn"><span class="rl-m">al confine</span><span>Fra la clearance sul peso reale ('+nf(c,0)+') e quella sul peso aggiustato ('+nf(s.clcrAgg,0)+') passa la soglia di <b>'+s.sogliaFra+' mL/min</b>: le dosi qui sotto seguono il peso reale, la scelta è clinica.</span></div>':'');
     for(var i=0;i<boxes.length;i++){
       var key=boxes[i].getAttribute("data-rene"), ids=RENE_TAB[key]||[], out=[], seen={};
       if(c!==null || d){
@@ -2028,7 +2039,7 @@ html.js.motore-ko #nomotore{display:block}
     if(s.map!==null) sc.push('<span class="sc '+(s.map<80?"hi":"")+'">MAP <b>'+nf(s.map,0)+'</b> mmHg</span>');
     if(s.lat!==null) sc.push('<span class="sc '+(s.lat>2?"hi":"lo")+'">lattato <b>'+nf(s.lat)+'</b></span>');
     if(s.bmi!==null) sc.push('<span class="sc">BMI <b>'+nf(s.bmi)+'</b></span>');
-    if(s.clcr!==null) sc.push('<span class="sc '+(s.clcr<30?"hi":"")+'">ClCr <b>'+nf(s.clcr,0)+'</b> mL/min <span style="opacity:.6">Cockcroft \u00b7 peso '+s.baseCG+(s.baseCG==="aggiustato"?" "+nf(s.pesoCG,0)+" kg":"")+'</span></span>');
+    if(s.clcr!==null) sc.push('<span class="sc '+(s.clcr<30?"hi":"")+'">ClCr <b>'+nf(s.clcr,0)+'</b> mL/min <span style="opacity:.6">Cockcroft \u00b7 peso reale'+(s.clcrAgg!==null?" \u00b7 aggiustato "+nf(s.clcrAgg,0):"")+'</span></span>');
     if(s.bio) sc.push('<span class="sc hi">biomarcatore +</span>');
     if(s.vd) sc.push('<span class="sc hi">disfunzione VD</span>');
     if(esc && s.bova!==null) sc.push('<span class="sc '+(s.bova>4?"hi":(s.bova<=2?"lo":""))+'">Bova <b>'+s.bova+'</b> · '+s.bovaStadio+'</span>');
